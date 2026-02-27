@@ -141,11 +141,21 @@ a:hover{border-bottom-color:var(--cyan)}
 @keyframes glowPulse{0%,100%{text-shadow:0 0 5px rgba(74,222,128,.2)}50%{text-shadow:0 0 15px rgba(74,222,128,.4)}}
 
 /* ===== RESPONSIVE ===== */
-@media(max-width:600px){
-  .screen{padding:1rem 1rem 8rem}
+@media(max-width:768px){
+  body{font-size:13px}
+  .screen{padding:1.5rem 1rem 8rem}
   .logo-block{margin:3rem 0 2rem}
   .section{margin:3rem 0}
-  .diagram{font-size:9px}
+  .diagram{font-size:clamp(7px,1.8vw,14px)}
+}
+@media(max-width:600px){
+  body{font-size:11px}
+  .screen{padding:1rem 0.5rem 8rem}
+  .logo-block{margin:2rem 0 1.5rem}
+  .section{margin:2rem 0}
+  .block{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .diagram{font-size:clamp(6px,1.6vw,14px)}
+  .sep{overflow-x:auto}
 }
 </style>
 </head>
