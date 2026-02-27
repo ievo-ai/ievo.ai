@@ -4,535 +4,484 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>iEvo — Self-Evolving AI Agent Framework</title>
-<meta name="description" content="AI agents that learn from mistakes. Marketplace of intelligent agents with genetic evolution. Spec-driven development with self-improving agents.">
+<meta name="description" content="AI agents that learn from mistakes. Self-evolving development team in your terminal.">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#0a0a0f;--surface:#12121a;--border:#1e1e2e;
-  --text:#e0e0e8;--muted:#6b6b80;--accent:#6366f1;
-  --accent2:#8b5cf6;--accent3:#06b6d4;--green:#22c55e;
-  --red:#ef4444;--amber:#f59e0b;
+  --bg:#0c0c0c;--surface:#111;--border:#222;
+  --text:#b0b0b0;--bright:#e0e0e0;--dim:#555;
+  --green:#4ade80;--cyan:#22d3ee;--purple:#a78bfa;
+  --red:#f87171;--amber:#fbbf24;--blue:#60a5fa;
 }
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:'SF Mono',SFMono-Regular,ui-monospace,'Cascadia Mono','Segoe UI Mono','Liberation Mono',Menlo,Monaco,Consolas,monospace;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
-
-/* Scrollbar */
+html{scroll-behavior:smooth}
+body{
+  font-family:'SF Mono',SFMono-Regular,'Cascadia Mono','Fira Code',monospace;
+  background:var(--bg);color:var(--text);font-size:15px;line-height:1.7;
+  overflow-x:hidden;cursor:default;
+}
+::selection{background:var(--green);color:var(--bg)}
 ::-webkit-scrollbar{width:6px}
 ::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
 
-/* Utility */
-.container{max-width:1100px;margin:0 auto;padding:0 2rem}
-.gradient-text{background:linear-gradient(135deg,var(--accent),var(--accent2),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.fade-in{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
-.fade-in.visible{opacity:1;transform:translateY(0)}
-
-/* ===== HERO ===== */
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 40%,rgba(99,102,241,.08) 0%,transparent 50%),radial-gradient(circle at 70% 60%,rgba(139,92,246,.06) 0%,transparent 50%);animation:heroGlow 15s ease-in-out infinite alternate}
-@keyframes heroGlow{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-3%,2%) scale(1.05)}}
-
-.hero-content{text-align:center;position:relative;z-index:1}
-.hero h1{font-size:clamp(3rem,8vw,6rem);font-weight:700;letter-spacing:-.03em;margin-bottom:.5rem}
-.hero .tagline{font-size:clamp(1rem,2.5vw,1.4rem);color:var(--muted);margin-bottom:3rem;max-width:600px;margin-left:auto;margin-right:auto}
-.hero .tagline em{color:var(--accent3);font-style:normal}
-
-/* DNA Helix animation */
-.dna-container{width:120px;height:200px;margin:0 auto 3rem;position:relative}
-.dna-strand{position:absolute;width:100%;height:100%}
-.dna-dot{position:absolute;width:8px;height:8px;border-radius:50%;left:50%;animation:dnaRotate 4s ease-in-out infinite}
-.dna-dot.left{background:var(--accent)}
-.dna-dot.right{background:var(--accent3)}
-.dna-line{position:absolute;height:1px;left:20%;width:60%;background:linear-gradient(90deg,var(--accent),var(--accent3));opacity:.3}
-@keyframes dnaRotate{
-  0%{transform:translateX(calc(-50% - 40px)) scale(.6);opacity:.3}
-  25%{transform:translateX(-50%) scale(1);opacity:1}
-  50%{transform:translateX(calc(-50% + 40px)) scale(.6);opacity:.3}
-  75%{transform:translateX(-50%) scale(1);opacity:1}
-  100%{transform:translateX(calc(-50% - 40px)) scale(.6);opacity:.3}
+/* ===== SCANLINES ===== */
+body::after{
+  content:'';position:fixed;top:0;left:0;width:100%;height:100%;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.03) 2px,rgba(0,0,0,.03) 4px);
+  pointer-events:none;z-index:9999;
 }
 
-/* Terminal */
-.terminal{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:0;max-width:540px;margin:0 auto;text-align:left;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.4)}
-.terminal-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;background:rgba(255,255,255,.02);border-bottom:1px solid var(--border)}
-.terminal-dot{width:12px;height:12px;border-radius:50%}
-.terminal-dot:nth-child(1){background:var(--red)}
-.terminal-dot:nth-child(2){background:var(--amber)}
-.terminal-dot:nth-child(3){background:var(--green)}
-.terminal-body{padding:20px 24px;font-size:.9rem}
-.terminal-line{margin-bottom:.5rem;opacity:0;animation:typeIn .5s ease forwards}
-.terminal-line .prompt{color:var(--green)}
-.terminal-line .cmd{color:var(--text)}
-.terminal-line .comment{color:var(--muted)}
-.terminal-line .success{color:var(--green)}
-.terminal-line .accent{color:var(--accent)}
-@keyframes typeIn{to{opacity:1}}
+/* ===== LAYOUT ===== */
+.screen{max-width:860px;margin:0 auto;padding:2rem 2rem 10rem}
 
-/* Cursor blink */
-.cursor{display:inline-block;width:8px;height:1.1em;background:var(--accent);vertical-align:text-bottom;animation:blink 1s step-end infinite}
+/* ===== CURSOR ===== */
+.cursor{display:inline-block;width:9px;height:1.15em;background:var(--green);vertical-align:text-bottom;animation:blink 1s step-end infinite;margin-left:2px}
 @keyframes blink{50%{opacity:0}}
 
+/* ===== TYPED BLOCKS ===== */
+.block{margin-bottom:0;opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s}
+.block.visible{opacity:1;transform:translateY(0)}
+.block .line{overflow:hidden;white-space:nowrap;width:0;transition:none}
+.block.visible .line{animation:typeLine .6s steps(40) forwards}
+.block.visible .line.instant{animation:none;width:100%}
+
+/* Staggered line animation */
+.block.visible .line:nth-child(1){animation-delay:0s}
+.block.visible .line:nth-child(2){animation-delay:.15s}
+.block.visible .line:nth-child(3){animation-delay:.3s}
+.block.visible .line:nth-child(4){animation-delay:.45s}
+.block.visible .line:nth-child(5){animation-delay:.6s}
+.block.visible .line:nth-child(6){animation-delay:.75s}
+.block.visible .line:nth-child(7){animation-delay:.9s}
+.block.visible .line:nth-child(8){animation-delay:1.05s}
+.block.visible .line:nth-child(9){animation-delay:1.2s}
+.block.visible .line:nth-child(10){animation-delay:1.35s}
+.block.visible .line:nth-child(11){animation-delay:1.5s}
+.block.visible .line:nth-child(12){animation-delay:1.65s}
+.block.visible .line:nth-child(13){animation-delay:1.8s}
+.block.visible .line:nth-child(14){animation-delay:1.95s}
+.block.visible .line:nth-child(15){animation-delay:2.1s}
+.block.visible .line:nth-child(16){animation-delay:2.25s}
+
+@keyframes typeLine{to{width:100%}}
+
+/* ===== COLORS ===== */
+.prompt{color:var(--green)}
+.cmd{color:var(--bright)}
+.comment{color:var(--dim)}
+.output{color:var(--text)}
+.success{color:var(--green)}
+.error{color:var(--red)}
+.warn{color:var(--amber)}
+.info{color:var(--cyan)}
+.accent{color:var(--purple)}
+.blue{color:var(--blue)}
+.bright{color:var(--bright)}
+.dim{color:var(--dim)}
+
+/* ===== LOGO ===== */
+.logo-block{margin:6rem 0 4rem;text-align:left}
+.logo-ascii{color:var(--green);font-size:clamp(10px,2.2vw,16px);line-height:1.3;white-space:pre;opacity:0;animation:fadeInGlow 2s ease forwards}
+@keyframes fadeInGlow{
+  0%{opacity:0;filter:blur(4px);text-shadow:0 0 30px var(--green)}
+  50%{opacity:1;filter:blur(0);text-shadow:0 0 20px rgba(74,222,128,.4)}
+  100%{opacity:1;text-shadow:0 0 8px rgba(74,222,128,.15)}
+}
+.logo-sub{color:var(--dim);margin-top:1.5rem;font-size:.9rem;opacity:0;animation:fadeIn 1s ease 1.5s forwards}
+@keyframes fadeIn{to{opacity:1}}
+
 /* ===== SECTIONS ===== */
-section{padding:8rem 0}
-section h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;margin-bottom:1rem}
-section .section-sub{color:var(--muted);font-size:1.1rem;margin-bottom:4rem;max-width:600px}
+.section{margin:5rem 0;padding:2rem 0}
+.section-header{margin-bottom:2rem}
+.section-header .line{white-space:normal}
 
-/* ===== CONCEPT — 3 Pillars ===== */
-.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
-.pillar{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2.5rem;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
-.pillar:hover{border-color:var(--accent);transform:translateY(-4px)}
-.pillar::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transition:transform .4s;transform-origin:left}
-.pillar:hover::before{transform:scaleX(1)}
-.pillar-icon{font-size:2.5rem;margin-bottom:1.5rem;display:block}
-.pillar h3{font-size:1.3rem;font-weight:600;margin-bottom:.75rem}
-.pillar p{color:var(--muted);font-size:.95rem}
+/* ===== SEPARATOR ===== */
+.sep{color:var(--dim);margin:3rem 0;opacity:0;transition:opacity .4s}
+.sep.visible{opacity:1}
 
-/* ===== PIPELINE SVG ===== */
-.pipeline-section{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.pipeline-scroll{overflow-x:auto;padding:2rem 0}
-.pipeline{display:flex;align-items:center;gap:0;min-width:900px;justify-content:center}
-.pipeline-node{display:flex;flex-direction:column;align-items:center;gap:.75rem;min-width:120px}
-.pipeline-circle{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;border:2px solid var(--border);background:var(--bg);transition:all .4s;position:relative}
-.pipeline-circle::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid transparent;transition:border-color .4s}
-.pipeline-node:hover .pipeline-circle{border-color:var(--accent);box-shadow:0 0 30px rgba(99,102,241,.2)}
-.pipeline-node:hover .pipeline-circle::after{border-color:rgba(99,102,241,.3)}
-.pipeline-label{font-size:.8rem;color:var(--muted);text-align:center;max-width:100px}
-.pipeline-arrow{width:60px;display:flex;align-items:center;justify-content:center;color:var(--border);font-size:1.2rem;flex-shrink:0}
-.pipeline-node.active .pipeline-circle{border-color:var(--green);box-shadow:0 0 20px rgba(34,197,94,.15)}
-.pipeline-node.active .pipeline-label{color:var(--green)}
+/* ===== PROGRESS BAR ===== */
+.progress-bar{display:inline-block;color:var(--green)}
+.progress-bar .bar-fill{display:inline-block;overflow:hidden;width:0}
+.block.visible .bar-fill{animation:fillBar 2s ease forwards}
+@keyframes fillBar{to{width:100%}}
 
-/* Animated connection line */
-.pipeline-arrow svg{width:60px;height:20px}
-.pipeline-arrow line{stroke:var(--border);stroke-width:2;stroke-dasharray:4 4;animation:dashMove 2s linear infinite}
-@keyframes dashMove{to{stroke-dashoffset:-40}}
+/* ===== TABLE ===== */
+.tbl{border-collapse:collapse;font-size:.85rem;width:100%;margin:.5rem 0}
+.tbl td,.tbl th{padding:4px 12px 4px 0;text-align:left;white-space:nowrap}
+.tbl th{color:var(--dim);font-weight:400;border-bottom:1px solid var(--border)}
+.tbl td{color:var(--text)}
+.tbl .tag{padding:1px 6px;border-radius:3px;font-size:.75rem}
+.tag-opus{background:rgba(248,113,113,.1);color:var(--red);border:1px solid rgba(248,113,113,.2)}
+.tag-sonnet{background:rgba(167,139,250,.1);color:var(--purple);border:1px solid rgba(167,139,250,.2)}
+.tag-haiku{background:rgba(34,211,238,.1);color:var(--cyan);border:1px solid rgba(34,211,238,.2)}
+.tag-installed{background:rgba(74,222,128,.1);color:var(--green);border:1px solid rgba(74,222,128,.2)}
+.tag-available{background:rgba(85,85,85,.2);color:var(--dim);border:1px solid var(--border)}
 
-/* ===== EVO SECTION ===== */
-.evo-flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-top:3rem}
-.evo-step{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:2rem;position:relative;counter-increment:evo}
-.evo-step::before{content:counter(evo);position:absolute;top:-12px;left:20px;background:var(--accent);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700}
-.evo-step h4{font-size:1.05rem;font-weight:600;margin-bottom:.5rem;margin-top:.25rem}
-.evo-step p{color:var(--muted);font-size:.9rem}
+/* ===== DIAGRAM (ASCII) ===== */
+.diagram{color:var(--dim);font-size:clamp(9px,1.5vw,14px);line-height:1.4;white-space:pre;overflow-x:auto;padding:1rem 0}
+.diagram .highlight{color:var(--green)}
+.diagram .node{color:var(--bright)}
+.diagram .arrow{color:var(--dim)}
+.diagram .label{color:var(--cyan)}
 
-/* Animated fitness bar */
-.fitness-demo{margin-top:3rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:2rem}
-.fitness-bar{height:8px;background:var(--border);border-radius:4px;margin:1rem 0 .5rem;overflow:hidden;position:relative}
-.fitness-fill{height:100%;border-radius:4px;transition:width 2s ease}
-.fitness-fill.before{background:var(--amber);width:0}
-.fitness-fill.after{background:var(--green);width:0}
-.fitness-fill.visible.before{width:65%}
-.fitness-fill.visible.after{width:89%}
-.fitness-label{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted)}
+/* ===== INTERACTIVE SECTION ===== */
+.interactive{margin:3rem 0}
+.interactive input{
+  background:transparent;border:none;color:var(--bright);font-family:inherit;
+  font-size:inherit;outline:none;width:60%;caret-color:var(--green);
+}
+.interactive input::placeholder{color:var(--dim)}
 
-/* ===== MARKETPLACE ===== */
-.agents-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-top:3rem}
-.agent-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-align:center;transition:all .3s;cursor:default}
-.agent-card:hover{border-color:var(--accent2);transform:translateY(-2px)}
-.agent-card .agent-icon{font-size:2rem;margin-bottom:.75rem;display:block}
-.agent-card h4{font-size:.95rem;font-weight:600;margin-bottom:.25rem}
-.agent-card .agent-tier{font-size:.75rem;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:.5rem}
-.tier-opus{background:rgba(239,68,68,.1);color:var(--red);border:1px solid rgba(239,68,68,.2)}
-.tier-sonnet{background:rgba(99,102,241,.1);color:var(--accent);border:1px solid rgba(99,102,241,.2)}
-.tier-haiku{background:rgba(6,182,212,.1);color:var(--accent3);border:1px solid rgba(6,182,212,.2)}
+/* ===== LINKS ===== */
+a{color:var(--cyan);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+a:hover{border-bottom-color:var(--cyan)}
 
-/* ===== ARCHITECTURE CODE BLOCK ===== */
-.arch-code{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:2rem;font-size:.85rem;overflow-x:auto;margin-top:2rem;line-height:1.8}
-.arch-code .k{color:var(--accent)}
-.arch-code .v{color:var(--accent3)}
-.arch-code .c{color:var(--muted)}
-.arch-code .s{color:var(--green)}
-
-/* ===== CTA ===== */
-.cta-section{text-align:center;padding:10rem 0}
-.cta-section h2{margin-bottom:1.5rem}
-.cta-section p{color:var(--muted);margin-bottom:3rem;font-size:1.1rem}
-.cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;border-radius:10px;font-size:.95rem;font-family:inherit;text-decoration:none;font-weight:600;transition:all .3s}
-.btn-primary{background:var(--accent);color:#fff;border:none}
-.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 10px 30px rgba(99,102,241,.3)}
-.btn-secondary{background:transparent;color:var(--text);border:1px solid var(--border)}
-.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
-
-/* ===== NAV ===== */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(20px);background:rgba(10,10,15,.8);border-bottom:1px solid transparent;transition:border-color .3s}
-nav.scrolled{border-bottom-color:var(--border)}
-nav .logo{font-size:1.2rem;font-weight:700;text-decoration:none;color:var(--text)}
-nav .logo span{color:var(--accent)}
-nav ul{display:flex;gap:2rem;list-style:none}
-nav a{color:var(--muted);text-decoration:none;font-size:.85rem;transition:color .3s}
-nav a:hover{color:var(--text)}
-
-/* ===== FOOTER ===== */
-footer{padding:3rem 0;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:.85rem}
+/* ===== GLOW PULSE ===== */
+.glow{animation:glowPulse 3s ease-in-out infinite}
+@keyframes glowPulse{0%,100%{text-shadow:0 0 5px rgba(74,222,128,.2)}50%{text-shadow:0 0 15px rgba(74,222,128,.4)}}
 
 /* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-  nav ul{display:none}
-  .pillars{grid-template-columns:1fr}
-  .pipeline{min-width:700px}
-  .agents-grid{grid-template-columns:repeat(2,1fr)}
-  section{padding:5rem 0}
-}
-
-/* ===== Floating particles ===== */
-.particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
-.particle{position:absolute;width:2px;height:2px;background:var(--accent);border-radius:50%;opacity:0;animation:particleFloat linear infinite}
-@keyframes particleFloat{
-  0%{opacity:0;transform:translateY(100vh) scale(0)}
-  10%{opacity:.4}
-  90%{opacity:.4}
-  100%{opacity:0;transform:translateY(-10vh) scale(1)}
+@media(max-width:600px){
+  .screen{padding:1rem 1rem 8rem}
+  .logo-block{margin:3rem 0 2rem}
+  .section{margin:3rem 0}
+  .diagram{font-size:9px}
 }
 </style>
 </head>
 <body>
 
-<!-- Particles -->
-<div class="particles" id="particles"></div>
+<div class="screen">
 
-<!-- Nav -->
-<nav id="nav">
-  <a href="#" class="logo"><span>i</span>Evo</a>
-  <ul>
-    <li><a href="#concept">Concept</a></li>
-    <li><a href="#pipeline">Pipeline</a></li>
-    <li><a href="#evolution">Evolution</a></li>
-    <li><a href="#marketplace">Marketplace</a></li>
-    <li><a href="#architecture">Architecture</a></li>
-  </ul>
-</nav>
+<!-- ===== BOOT ===== -->
+<div class="logo-block">
+<pre class="logo-ascii">
+      ███████╗██╗   ██╗ ██████╗
+  ██╗ ██╔════╝██║   ██║██╔═══██╗
+  ██║ █████╗  ██║   ██║██║   ██║
+  ██║ ██╔══╝  ╚██╗ ██╔╝██║   ██║
+  ██║ ███████╗ ╚████╔╝ ╚██████╔╝
+  ╚═╝ ╚══════╝  ╚═══╝   ╚═════╝
+</pre>
+<div class="logo-sub">Self-evolving AI agent framework &middot; <a href="https://ievo.ai">ievo.ai</a></div>
+</div>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-content">
-    <div class="dna-container" id="dna"></div>
-    <h1 class="gradient-text">iEvo</h1>
-    <p class="tagline">AI agents that <em>learn from mistakes</em>.<br>A self-evolving development team in your terminal.</p>
-    <div class="terminal">
-      <div class="terminal-bar">
-        <div class="terminal-dot"></div>
-        <div class="terminal-dot"></div>
-        <div class="terminal-dot"></div>
-      </div>
-      <div class="terminal-body" id="terminalBody"></div>
-    </div>
-  </div>
-</section>
+<!-- ===== INIT ===== -->
+<div class="block" data-block>
+<div class="line"><span class="prompt">$ </span><span class="cmd">cat README.md</span></div>
+</div>
+<div class="block" data-block>
+<div class="line"><br></div>
+<div class="line"><span class="bright"># What is iEvo?</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="output">AI agents that learn from every mistake.</span></div>
+<div class="line"><span class="output">Not another orchestrator — a methodology layer.</span></div>
+<div class="line"><span class="output">Install agents like packages. They evolve collectively.</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="dim">Three pillars:</span></div>
+<div class="line"><span class="green"> ✦ </span><span class="bright">Spec-Driven Development</span><span class="dim"> — formal specs before code</span></div>
+<div class="line"><span class="info"> ✦ </span><span class="bright">Agent Marketplace</span><span class="dim"> — ievo add &lt;agent&gt;</span></div>
+<div class="line"><span class="accent"> ✦ </span><span class="bright">Self-Evolution</span><span class="dim"> — genetic algorithm improves agents</span></div>
+</div>
 
-<!-- Concept -->
-<section id="concept">
-  <div class="container">
-    <h2 class="fade-in">Three <span class="gradient-text">pillars</span></h2>
-    <p class="section-sub fade-in">Not another orchestrator. A methodology layer that makes AI agents disciplined, testable, and self-improving.</p>
-    <div class="pillars">
-      <div class="pillar fade-in">
-        <span class="pillar-icon">&#9881;</span>
-        <h3>Spec-Driven Development</h3>
-        <p>Every feature starts as a formal spec. Atomic requirements with testable acceptance criteria. No vague instructions, no hallucinated scope. Specs drive everything — plans, code, tests, reviews.</p>
-      </div>
-      <div class="pillar fade-in">
-        <span class="pillar-icon">&#9878;</span>
-        <h3>Agent Marketplace</h3>
-        <p>Install agents like packages: <code>ievo add spec-writer</code>. Each agent brings its own role, memory, skills, and MCP integrations. Dependencies auto-resolve. Domain experts plug in when needed.</p>
-      </div>
-      <div class="pillar fade-in">
-        <span class="pillar-icon">&#10038;</span>
-        <h3>Self-Evolution</h3>
-        <p>Every agent has an EVO skill. Mistakes trigger root-cause analysis, ROLE.md updates, and evolution logs. A Curator agent aggregates lessons across all projects — genetic algorithm improves agents collectively.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="sep" data-block>─────────────────────────────────────────────────────────────</div>
 
-<!-- Pipeline -->
-<section id="pipeline" class="pipeline-section">
-  <div class="container">
-    <h2 class="fade-in" style="text-align:center">The <span class="gradient-text">pipeline</span></h2>
-    <p class="section-sub fade-in" style="text-align:center;margin-left:auto;margin-right:auto">Two human review gates. Everything between is automated.</p>
-    <div class="pipeline-scroll">
-      <div class="pipeline">
-        <div class="pipeline-node active">
-          <div class="pipeline-circle">&#128100;</div>
-          <span class="pipeline-label">Product Owner</span>
-        </div>
-        <div class="pipeline-arrow"><svg><line x1="0" y1="10" x2="60" y2="10"/></svg></div>
-        <div class="pipeline-node">
-          <div class="pipeline-circle">&#128221;</div>
-          <span class="pipeline-label">Spec Writer<br><small style="color:var(--accent)">Sonnet</small></span>
-        </div>
-        <div class="pipeline-arrow"><svg><line x1="0" y1="10" x2="60" y2="10"/></svg></div>
-        <div class="pipeline-node">
-          <div class="pipeline-circle">&#127959;</div>
-          <span class="pipeline-label">Architect<br><small style="color:var(--red)">Opus</small></span>
-        </div>
-        <div class="pipeline-arrow"><svg><line x1="0" y1="10" x2="60" y2="10"/></svg></div>
-        <div class="pipeline-node">
-          <div class="pipeline-circle">&#128187;</div>
-          <span class="pipeline-label">Coder<br><small style="color:var(--accent)">Sonnet</small></span>
-        </div>
-        <div class="pipeline-arrow"><svg><line x1="0" y1="10" x2="60" y2="10"/></svg></div>
-        <div class="pipeline-node">
-          <div class="pipeline-circle">&#128270;</div>
-          <span class="pipeline-label">Tester<br><small style="color:var(--accent)">Sonnet</small></span>
-        </div>
-        <div class="pipeline-arrow"><svg><line x1="0" y1="10" x2="60" y2="10"/></svg></div>
-        <div class="pipeline-node">
-          <div class="pipeline-circle">&#9989;</div>
-          <span class="pipeline-label">Reviewer<br><small style="color:var(--red)">Opus</small></span>
-        </div>
-        <div class="pipeline-arrow"><svg><line x1="0" y1="10" x2="60" y2="10"/></svg></div>
-        <div class="pipeline-node active">
-          <div class="pipeline-circle">&#128100;</div>
-          <span class="pipeline-label">Review Gate</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ===== QUICKSTART ===== -->
+<div class="block" data-block>
+<div class="line"><span class="prompt">$ </span><span class="cmd">ievo init my-project</span></div>
+</div>
+<div class="block" data-block>
+<div class="line"><span class="success">✓</span><span class="output"> Created ievo.yaml</span></div>
+<div class="line"><span class="success">✓</span><span class="output"> Created spec/</span></div>
+<div class="line"><span class="success">✓</span><span class="output"> Created plans/</span></div>
+<div class="line"><span class="success">✓</span><span class="output"> Created agents/</span></div>
+<div class="line"><br></div>
+</div>
+<div class="block" data-block>
+<div class="line"><span class="prompt">$ </span><span class="cmd">ievo add spec-writer architect coder</span></div>
+</div>
+<div class="block" data-block>
+<div class="line"><span class="dim">  Resolving dependencies...</span></div>
+<div class="line"><span class="success">✓</span><span class="output"> spec-writer@0.3.2 </span><span class="dim">— features → atomic REQs</span></div>
+<div class="line"><span class="success">✓</span><span class="output"> architect@0.2.1 </span><span class="dim">— REQs → implementation plans</span></div>
+<div class="line"><span class="success">✓</span><span class="output"> coder@0.2.0 </span><span class="dim">— plans → TDD code</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="bright">  3 agents installed.</span><span class="dim"> EVO skill included in each.</span></div>
+</div>
 
-<!-- Evolution -->
-<section id="evolution">
-  <div class="container">
-    <h2 class="fade-in">Self-<span class="gradient-text">evolution</span></h2>
-    <p class="section-sub fade-in">Agents learn from every mistake. A genetic algorithm ensures only improvements survive.</p>
-    <div class="evo-flow" style="counter-reset:evo">
-      <div class="evo-step fade-in">
-        <h4>Error Detected</h4>
-        <p>Agent makes a mistake. User says <code>/evo</code> or the on_error hook fires automatically.</p>
-      </div>
-      <div class="evo-step fade-in">
-        <h4>Root Cause Analysis</h4>
-        <p>EVO skill classifies the error, identifies the wrong assumption, and formulates an actionable rule.</p>
-      </div>
-      <div class="evo-step fade-in">
-        <h4>Mutate ROLE.md</h4>
-        <p>A new rule is proposed. After user approval, ROLE.md is updated and the change is logged.</p>
-      </div>
-      <div class="evo-step fade-in">
-        <h4>Collective Learning</h4>
-        <p>Evolution logs from all projects flow to the Curator. Patterns emerge. The marketplace agent evolves.</p>
-      </div>
-    </div>
-    <div class="fitness-demo fade-in">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <h4>Genetic fitness after evolution</h4>
-        <span style="font-size:.8rem;color:var(--muted)">spec-writer v0.3.0</span>
-      </div>
-      <div class="fitness-bar"><div class="fitness-fill before" id="fitBefore"></div></div>
-      <div class="fitness-label"><span>Before: 0.65</span><span style="color:var(--amber)">12 eval scenarios</span></div>
-      <div class="fitness-bar"><div class="fitness-fill after" id="fitAfter"></div></div>
-      <div class="fitness-label"><span>After: 0.89</span><span style="color:var(--green)">+37% improvement</span></div>
-    </div>
-  </div>
-</section>
+<div class="block" data-block>
+<div class="line"><br></div>
+<div class="line"><span class="prompt">$ </span><span class="cmd">ievo run spec-writer</span></div>
+</div>
+<div class="block" data-block>
+<div class="line"><span class="info">⚡ Loading memory...</span></div>
+<div class="line"><span class="info">⚡ Loading ROLE.md (tier 1: metadata)...</span></div>
+<div class="line"><span class="info">⚡ Loading ROLE.md (tier 2: instructions)...</span></div>
+<div class="line"><span class="success">✓ Ready.</span><span class="dim"> Conversation mode active.</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="accent">spec-writer › </span><span class="output">Hello! I'm your Spec Writer. Tell me about</span></div>
+<div class="line"><span class="output">               your project and I'll create formal requirements.</span></div>
+<div class="line"><span class="output">               I'll also fill in my memory as we talk.</span></div>
+</div>
 
-<!-- Marketplace -->
-<section id="marketplace">
-  <div class="container">
-    <h2 class="fade-in">Agent <span class="gradient-text">marketplace</span></h2>
-    <p class="section-sub fade-in">Install agents like packages. Each one brings memory, skills, MCP tools, and the EVO skill.</p>
-    <div class="agents-grid">
-      <div class="agent-card fade-in">
-        <span class="agent-icon">&#128221;</span>
-        <h4>Spec Writer</h4>
-        <p style="font-size:.8rem;color:var(--muted)">Features → atomic REQs</p>
-        <span class="agent-tier tier-sonnet">Sonnet</span>
-      </div>
-      <div class="agent-card fade-in">
-        <span class="agent-icon">&#127959;</span>
-        <h4>Architect</h4>
-        <p style="font-size:.8rem;color:var(--muted)">REQs → implementation plans</p>
-        <span class="agent-tier tier-opus">Opus</span>
-      </div>
-      <div class="agent-card fade-in">
-        <span class="agent-icon">&#128187;</span>
-        <h4>Coder</h4>
-        <p style="font-size:.8rem;color:var(--muted)">Plans → TDD code</p>
-        <span class="agent-tier tier-sonnet">Sonnet</span>
-      </div>
-      <div class="agent-card fade-in">
-        <span class="agent-icon">&#128270;</span>
-        <h4>Tester</h4>
-        <p style="font-size:.8rem;color:var(--muted)">Integration & acceptance</p>
-        <span class="agent-tier tier-sonnet">Sonnet</span>
-      </div>
-      <div class="agent-card fade-in">
-        <span class="agent-icon">&#9989;</span>
-        <h4>Reviewer</h4>
-        <p style="font-size:.8rem;color:var(--muted)">Quality & spec compliance</p>
-        <span class="agent-tier tier-opus">Opus</span>
-      </div>
-      <div class="agent-card fade-in">
-        <span class="agent-icon">&#128202;</span>
-        <h4>PM</h4>
-        <p style="font-size:.8rem;color:var(--muted)">Progress & priorities</p>
-        <span class="agent-tier tier-haiku">Haiku</span>
-      </div>
-      <div class="agent-card fade-in">
-        <span class="agent-icon">&#128137;</span>
-        <h4>Medical Researcher</h4>
-        <p style="font-size:.8rem;color:var(--muted)">PubMed MCP</p>
-        <span class="agent-tier tier-sonnet">Sonnet</span>
-      </div>
-      <div class="agent-card fade-in">
-        <span class="agent-icon">&#128274;</span>
-        <h4>Security Officer</h4>
-        <p style="font-size:.8rem;color:var(--muted)">Vulnerability scanning</p>
-        <span class="agent-tier tier-opus">Opus</span>
-      </div>
-      <div class="agent-card fade-in">
-        <span class="agent-icon">&#9729;</span>
-        <h4>DevOps</h4>
-        <p style="font-size:.8rem;color:var(--muted)">K8s & CI/CD MCP</p>
-        <span class="agent-tier tier-sonnet">Sonnet</span>
-      </div>
-      <div class="agent-card fade-in">
-        <span class="agent-icon">&#127918;</span>
-        <h4>Unity Developer</h4>
-        <p style="font-size:.8rem;color:var(--muted)">Unity MCP</p>
-        <span class="agent-tier tier-sonnet">Sonnet</span>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="sep" data-block>─────────────────────────────────────────────────────────────</div>
 
-<!-- Architecture -->
-<section id="architecture">
-  <div class="container">
-    <h2 class="fade-in">Under the <span class="gradient-text">hood</span></h2>
-    <p class="section-sub fade-in">Three repos. One ecosystem. Agents as packages with version control, dependencies, and lifecycle hooks.</p>
-    <div class="arch-code fade-in">
-<span class="c"># agent.yaml — every agent is a package</span>
-<span class="k">name</span>: <span class="v">spec-writer</span>
-<span class="k">version</span>: <span class="v">0.1.0</span>
+<!-- ===== PIPELINE ===== -->
+<div class="block" data-block>
+<div class="line"><span class="prompt">$ </span><span class="cmd">ievo pipeline --show</span></div>
+</div>
+<div class="block" data-block>
+<div class="line"><br></div>
+<div class="line"><span class="bright">  SDD Pipeline</span><span class="dim">  — two human gates, everything between is automated</span></div>
+<div class="line"><br></div>
+</div>
 
-<span class="k">model</span>:
-  <span class="k">primary</span>: <span class="v">sonnet</span>     <span class="c"># $3/1M tokens</span>
-  <span class="k">fallback</span>: <span class="v">haiku</span>     <span class="c"># $0.80/1M tokens</span>
+<div class="block" data-block>
+<pre class="diagram">
+  <span class="node">┌──────────┐</span>      <span class="node">┌──────────┐</span>      <span class="node">┌──────────┐</span>
+  <span class="node">│</span> <span class="highlight">  YOU     </span><span class="node">│</span><span class="arrow"> ───▶ </span><span class="node">│</span> <span class="label">  SPEC    </span><span class="node">│</span><span class="arrow"> ───▶ </span><span class="node">│</span> <span class="label">ARCHITECT </span><span class="node">│</span>
+  <span class="node">│</span> <span class="highlight"> (ideas)  </span><span class="node">│</span>      <span class="node">│</span> <span class="label"> WRITER   </span><span class="node">│</span>      <span class="node">│</span> <span class="label"> (plans)  </span><span class="node">│</span>
+  <span class="node">└──────────┘</span>      <span class="node">└──────────┘</span>      <span class="node">└──────────┘</span>
+                                            <span class="arrow">│</span>
+       <span class="dim">review gate</span>                          <span class="arrow">▼</span>
+  <span class="node">┌──────────┐</span>      <span class="node">┌──────────┐</span>      <span class="node">┌──────────┐</span>
+  <span class="node">│</span> <span class="highlight">  YOU     </span><span class="node">│</span><span class="arrow"> ◀─── </span><span class="node">│</span> <span class="label"> REVIEWER </span><span class="node">│</span><span class="arrow"> ◀─── </span><span class="node">│</span> <span class="label">  CODER   </span><span class="node">│</span>
+  <span class="node">│</span> <span class="highlight">(approve) </span><span class="node">│</span>      <span class="node">│</span> <span class="label">(quality) </span><span class="node">│</span>      <span class="node">│</span> <span class="label">  (TDD)   </span><span class="node">│</span>
+  <span class="node">└──────────┘</span>      <span class="node">└──────────┘</span>      <span class="node">└──────────┘</span>
+</pre>
+</div>
 
-<span class="k">dependencies</span>: <span class="v">[]</span>
+<div class="sep" data-block>─────────────────────────────────────────────────────────────</div>
 
-<span class="k">skills</span>:
-  - <span class="s">evo</span>                <span class="c"># self-evolution (always included)</span>
+<!-- ===== MARKETPLACE ===== -->
+<div class="block" data-block>
+<div class="line"><span class="prompt">$ </span><span class="cmd">ievo list --marketplace</span></div>
+</div>
+<div class="block" data-block>
+<div class="line"><br></div>
+<div class="line"><span class="bright">  AGENT              MODEL     STATUS       DESCRIPTION</span></div>
+<div class="line"><span class="dim">  ─────────────────────────────────────────────────────────</span></div>
+<div class="line"><span class="output">  spec-writer        </span><span class="accent">sonnet    </span><span class="success">installed    </span><span class="dim">features → atomic REQs</span></div>
+<div class="line"><span class="output">  architect          </span><span class="error">opus      </span><span class="success">installed    </span><span class="dim">REQs → implementation plans</span></div>
+<div class="line"><span class="output">  coder              </span><span class="accent">sonnet    </span><span class="success">installed    </span><span class="dim">plans → TDD code</span></div>
+<div class="line"><span class="output">  tester             </span><span class="accent">sonnet    </span><span class="dim">available    </span><span class="dim">integration &amp; acceptance</span></div>
+<div class="line"><span class="output">  reviewer           </span><span class="error">opus      </span><span class="dim">available    </span><span class="dim">quality &amp; spec compliance</span></div>
+<div class="line"><span class="output">  pm                 </span><span class="info">haiku     </span><span class="dim">available    </span><span class="dim">progress &amp; priorities</span></div>
+<div class="line"><span class="dim">  ─────────────────────────────────────────────────────────</span></div>
+<div class="line"><span class="bright">  DOMAIN AGENTS</span></div>
+<div class="line"><span class="dim">  ─────────────────────────────────────────────────────────</span></div>
+<div class="line"><span class="output">  medical-researcher </span><span class="accent">sonnet    </span><span class="dim">available    </span><span class="dim">PubMed MCP integration</span></div>
+<div class="line"><span class="output">  security-officer   </span><span class="error">opus      </span><span class="dim">available    </span><span class="dim">vulnerability scanning</span></div>
+<div class="line"><span class="output">  devops             </span><span class="accent">sonnet    </span><span class="dim">available    </span><span class="dim">K8s &amp; CI/CD MCP</span></div>
+<div class="line"><span class="output">  unity-developer    </span><span class="accent">sonnet    </span><span class="dim">available    </span><span class="dim">Unity engine MCP</span></div>
+</div>
 
-<span class="k">hooks</span>:
-  <span class="k">on_session_start</span>: <span class="s">"load_memory"</span>
-  <span class="k">on_session_end</span>:   <span class="s">"save_memory"</span>
-  <span class="k">on_error</span>:          <span class="s">"evo_analyze"</span>
+<div class="sep" data-block>─────────────────────────────────────────────────────────────</div>
 
-<span class="k">disclosure</span>:          <span class="c"># progressive loading</span>
-  <span class="k">metadata</span>: <span class="v">100</span>       <span class="c"># always loaded</span>
-  <span class="k">instructions</span>: <span class="v">400</span>   <span class="c"># on activation</span>
-  <span class="k">resources</span>: <span class="v">600</span>      <span class="c"># on demand</span>
-    </div>
-  </div>
-</section>
+<!-- ===== EVO ===== -->
+<div class="block" data-block>
+<div class="line"><span class="prompt">$ </span><span class="cmd">ievo learn log spec-writer --last 1</span></div>
+</div>
+<div class="block" data-block>
+<div class="line"><br></div>
+<div class="line"><span class="warn">  EVOLUTION #47</span><span class="dim">  spec-writer  2026-02-28</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="dim">  Context:</span><span class="output">  Agent assumed Node.js when project uses Python.</span></div>
+<div class="line"><span class="dim">  Action:</span><span class="output">   Added rule: "NEVER assume tech stack. Check</span></div>
+<div class="line"><span class="output">              CONTEXT.md or ask user."</span></div>
+<div class="line"><span class="dim">  Goal:</span><span class="output">     Prevent tech-specific assumptions.</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="dim">  Fitness:</span><span class="output">  0.65 → 0.89 </span><span class="success">(+37%)</span></div>
+<div class="line"><span class="dim">  Status:</span><span class="success">   mutation accepted ✓</span></div>
+</div>
 
-<!-- CTA -->
-<section class="cta-section">
-  <div class="container">
-    <h2 class="gradient-text fade-in">Build. Evolve. Repeat.</h2>
-    <p class="fade-in">Start with one agent. Watch it learn. Scale to a full team.</p>
-    <div class="cta-buttons fade-in">
-      <a href="https://github.com/ievo-ai" class="btn btn-primary">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-        GitHub
-      </a>
-      <a href="#concept" class="btn btn-secondary">Learn more</a>
-    </div>
-  </div>
-</section>
+<div class="sep" data-block>─────────────────────────────────────────────────────────────</div>
 
-<footer>
-  <div class="container">
-    <p>iEvo &mdash; Self-evolving AI agent framework &mdash; ievo.ai</p>
-  </div>
-</footer>
+<!-- ===== EVO FLOW ===== -->
+<div class="block" data-block>
+<div class="line"><span class="prompt">$ </span><span class="cmd">ievo learn --explain</span></div>
+</div>
+<div class="block" data-block>
+<div class="line"><br></div>
+<div class="line"><span class="bright">  How self-evolution works:</span></div>
+<div class="line"><br></div>
+</div>
+
+<div class="block" data-block>
+<pre class="diagram">
+  <span class="node">Agent makes mistake</span>
+       <span class="arrow">│</span>
+       <span class="arrow">▼</span>
+  <span class="node">┌─────────────────┐</span>
+  <span class="node">│</span> <span class="label">  EVO SKILL      </span><span class="node">│</span>   <span class="dim">Root cause analysis</span>
+  <span class="node">│</span> <span class="label">  (in every agent)</span><span class="node">│</span>   <span class="dim">Classify → Analyze → Fix</span>
+  <span class="node">└────────┬────────┘</span>
+       <span class="arrow">│</span>
+       <span class="arrow">├──────────▶</span> <span class="highlight">ROLE.md updated</span>   <span class="dim">(agent gets smarter)</span>
+       <span class="arrow">│</span>
+       <span class="arrow">▼</span>
+  <span class="node">EVOLUTION_LOG.md</span>       <span class="dim">Local lesson saved</span>
+       <span class="arrow">│</span>
+       <span class="arrow">│</span>  <span class="dim">ievo learn push (opt-in)</span>
+       <span class="arrow">▼</span>
+  <span class="node">┌─────────────────┐</span>
+  <span class="node">│</span> <span class="label">  CURATOR AGENT  </span><span class="node">│</span>   <span class="dim">Reads logs from ALL projects</span>
+  <span class="node">│</span> <span class="label">  (marketplace)  </span><span class="node">│</span>   <span class="dim">Finds patterns across users</span>
+  <span class="node">└────────┬────────┘</span>
+       <span class="arrow">│</span>
+       <span class="arrow">├──────────▶</span> <span class="highlight">Genetic fitness test</span>  <span class="dim">(eval suite)</span>
+       <span class="arrow">│</span>
+       <span class="arrow">▼</span>
+  <span class="node">Marketplace updated</span>    <span class="dim">ievo update → all projects improve</span>
+</pre>
+</div>
+
+<div class="sep" data-block>─────────────────────────────────────────────────────────────</div>
+
+<!-- ===== GENETIC ===== -->
+<div class="block" data-block>
+<div class="line"><span class="prompt">$ </span><span class="cmd">ievo learn fitness spec-writer</span></div>
+</div>
+<div class="block" data-block>
+<div class="line"><br></div>
+<div class="line"><span class="bright">  Genetic fitness report — spec-writer</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="dim">  Genome    :</span><span class="output">  ROLE.md (42 rules, 8 sections)</span></div>
+<div class="line"><span class="dim">  Population:</span><span class="output">  147 variants across 23 projects</span></div>
+<div class="line"><span class="dim">  Eval suite:</span><span class="output">  12 test scenarios</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="dim">  v0.1.0  </span><span class="dim">████░░░░░░░░░░░░░░░░</span><span class="dim">  0.45</span></div>
+<div class="line"><span class="dim">  v0.2.0  </span><span class="warn">████████░░░░░░░░░░░░</span><span class="warn">  0.62</span></div>
+<div class="line"><span class="dim">  v0.3.0  </span><span class="success">█████████████░░░░░░░</span><span class="success">  0.78</span></div>
+<div class="line"><span class="dim">  v0.3.2  </span><span class="success">████████████████░░░░</span><span class="success">  0.89  </span><span class="info">← current</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="dim">  Top mutation:</span><span class="output">  "Never assume tech stack" </span><span class="success">+12% fitness</span></div>
+<div class="line"><span class="dim">  Worst revert:</span><span class="output">  "Always use bullet lists" </span><span class="error">-8% fitness</span></div>
+</div>
+
+<div class="sep" data-block>─────────────────────────────────────────────────────────────</div>
+
+<!-- ===== AGENT.YAML ===== -->
+<div class="block" data-block>
+<div class="line"><span class="prompt">$ </span><span class="cmd">cat agents/spec-writer/agent.yaml</span></div>
+</div>
+<div class="block" data-block>
+<div class="line"><br></div>
+<div class="line"><span class="info">name</span><span class="dim">: </span><span class="output">spec-writer</span></div>
+<div class="line"><span class="info">version</span><span class="dim">: </span><span class="output">0.3.2</span></div>
+<div class="line"><span class="info">description</span><span class="dim">: </span><span class="output">"Features → atomic, testable requirements"</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="info">model</span><span class="dim">:</span></div>
+<div class="line"><span class="dim">  primary: </span><span class="accent">sonnet</span><span class="dim">      # $3/1M tokens</span></div>
+<div class="line"><span class="dim">  fallback: </span><span class="info">haiku</span><span class="dim">      # $0.80/1M tokens</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="info">skills</span><span class="dim">:</span></div>
+<div class="line"><span class="dim">  - </span><span class="success">evo</span><span class="dim">                # self-evolution (always included)</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="info">hooks</span><span class="dim">:</span></div>
+<div class="line"><span class="dim">  on_session_start: </span><span class="output">"load_memory"</span></div>
+<div class="line"><span class="dim">  on_session_end:   </span><span class="output">"save_memory"</span></div>
+<div class="line"><span class="dim">  on_error:          </span><span class="output">"evo_analyze"</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="info">disclosure</span><span class="dim">:           # progressive loading</span></div>
+<div class="line"><span class="dim">  metadata: </span><span class="output">100</span><span class="dim">       # always loaded</span></div>
+<div class="line"><span class="dim">  instructions: </span><span class="output">400</span><span class="dim">   # on activation</span></div>
+<div class="line"><span class="dim">  resources: </span><span class="output">600</span><span class="dim">      # on demand</span></div>
+</div>
+
+<div class="sep" data-block>─────────────────────────────────────────────────────────────</div>
+
+<!-- ===== COST ===== -->
+<div class="block" data-block>
+<div class="line"><span class="prompt">$ </span><span class="cmd">ievo cost --estimate</span></div>
+</div>
+<div class="block" data-block>
+<div class="line"><br></div>
+<div class="line"><span class="bright">  3-tier model routing — 49% cost reduction vs all-Opus</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="dim">  AGENT           MODEL    $/1M tokens   ROLE</span></div>
+<div class="line"><span class="dim">  ─────────────────────────────────────────────────────</span></div>
+<div class="line"><span class="output">  spec-writer     </span><span class="accent">sonnet</span><span class="output">    $3.00       reasoning</span></div>
+<div class="line"><span class="output">  architect       </span><span class="error">opus</span><span class="output">     $15.00       critical decisions</span></div>
+<div class="line"><span class="output">  coder           </span><span class="accent">sonnet</span><span class="output">    $3.00       follows plan</span></div>
+<div class="line"><span class="output">  coder (tests)   </span><span class="info">haiku</span><span class="output">     $0.80       deterministic</span></div>
+<div class="line"><span class="output">  reviewer        </span><span class="error">opus</span><span class="output">     $15.00       catches mistakes</span></div>
+<div class="line"><span class="output">  pm              </span><span class="info">haiku</span><span class="output">     $0.80       status reports</span></div>
+</div>
+
+<div class="sep" data-block>─────────────────────────────────────────────────────────────</div>
+
+<!-- ===== THREE REPOS ===== -->
+<div class="block" data-block>
+<div class="line"><span class="prompt">$ </span><span class="cmd">ievo --architecture</span></div>
+</div>
+<div class="block" data-block>
+<div class="line"><br></div>
+<div class="line"><span class="bright">  Three repos. One ecosystem.</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="success">  ievo-marketplace/</span><span class="dim">   Ready-made agents. Install &amp; use.</span></div>
+<div class="line"><span class="accent">  ievo-sdk/</span><span class="dim">           Dev template. Create new agents.</span></div>
+<div class="line"><span class="info">  ievo-cli/</span><span class="dim">           CLI tool. init, add, run, learn.</span></div>
+<div class="line"><br></div>
+</div>
+
+<div class="block" data-block>
+<pre class="diagram">
+  <span class="node">┌────────────────────────────────────────────────┐</span>
+  <span class="node">│</span>               <span class="highlight">iEvo ECOSYSTEM</span>                   <span class="node">│</span>
+  <span class="node">│</span>                                                <span class="node">│</span>
+  <span class="node">│</span>  <span class="label">Marketplace</span>     <span class="label">Dev SDK</span>        <span class="label">CLI</span>           <span class="node">│</span>
+  <span class="node">│</span>  <span class="dim">(agents)</span>        <span class="dim">(Copier)</span>       <span class="dim">(ievo)</span>        <span class="node">│</span>
+  <span class="node">│</span>       <span class="arrow">│</span>              <span class="arrow">│</span>             <span class="arrow">│</span>           <span class="node">│</span>
+  <span class="node">│</span>       <span class="arrow">▼</span>              <span class="arrow">▼</span>             <span class="arrow">▼</span>           <span class="node">│</span>
+  <span class="node">│</span>  <span class="node">┌──────────────────────────────────────┐</span>  <span class="node">│</span>
+  <span class="node">│</span>  <span class="node">│</span>  <span class="highlight">SDD → REQs → Plan → TDD → EVO</span>      <span class="node">│</span>  <span class="node">│</span>
+  <span class="node">│</span>  <span class="node">└──────────────────────────────────────┘</span>  <span class="node">│</span>
+  <span class="node">│</span>                     <span class="arrow">│</span>                        <span class="node">│</span>
+  <span class="node">│</span>  <span class="node">┌──────────────────────────────────────┐</span>  <span class="node">│</span>
+  <span class="node">│</span>  <span class="node">│</span>  <span class="dim">Claude API │ MCP │ File System │ Git</span> <span class="node">│</span>  <span class="node">│</span>
+  <span class="node">│</span>  <span class="node">└──────────────────────────────────────┘</span>  <span class="node">│</span>
+  <span class="node">└────────────────────────────────────────────────┘</span>
+</pre>
+</div>
+
+<div class="sep" data-block>─────────────────────────────────────────────────────────────</div>
+
+<!-- ===== CTA ===== -->
+<div class="block" data-block>
+<div class="line"><span class="prompt">$ </span><span class="cmd">ievo --links</span></div>
+</div>
+<div class="block" data-block>
+<div class="line"><br></div>
+<div class="line"><span class="bright">  Get started:</span></div>
+<div class="line"><br></div>
+<div class="line"><span class="dim">  GitHub    </span><a href="https://github.com/ievo-ai">github.com/ievo-ai</a></div>
+<div class="line"><span class="dim">  Docs      </span><span class="dim">coming soon</span></div>
+<div class="line"><span class="dim">  Discord   </span><span class="dim">coming soon</span></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><span class="dim">  Built by </span><a href="https://27tech.co">27tech</a><span class="dim"> &middot; Powered by Claude</span></div>
+<div class="line"><br></div>
+</div>
+
+<!-- Final cursor -->
+<div class="block" data-block style="margin-top:2rem">
+<div class="line instant"><span class="prompt">$ </span><span class="cursor"></span></div>
+</div>
+
+</div>
 
 <script>
-// Particles
-(function(){
-  const c=document.getElementById('particles');
-  for(let i=0;i<30;i++){
-    const p=document.createElement('div');
-    p.className='particle';
-    p.style.left=Math.random()*100+'%';
-    p.style.animationDuration=(8+Math.random()*12)+'s';
-    p.style.animationDelay=Math.random()*10+'s';
-    p.style.width=p.style.height=(1+Math.random()*2)+'px';
-    c.appendChild(p);
-  }
-})();
-
-// DNA Helix
-(function(){
-  const c=document.getElementById('dna');
-  const pairs=8;
-  for(let i=0;i<pairs;i++){
-    const y=(i/pairs)*100;
-    const dl=document.createElement('div');
-    dl.className='dna-dot left';
-    dl.style.top=y+'%';
-    dl.style.animationDelay=(i*0.3)+'s';
-    const dr=document.createElement('div');
-    dr.className='dna-dot right';
-    dr.style.top=y+'%';
-    dr.style.animationDelay=(i*0.3+2)+'s';
-    const line=document.createElement('div');
-    line.className='dna-line';
-    line.style.top=y+'%';
-    line.style.animationDelay=(i*0.3)+'s';
-    c.appendChild(dl);c.appendChild(dr);c.appendChild(line);
-  }
-})();
-
-// Terminal typing
-(function(){
-  const lines=[
-    {prompt:'$ ',cmd:'ievo init',delay:800},
-    {comment:'✓ Created ievo.yaml, spec/, plans/',delay:400},
-    {prompt:'$ ',cmd:'ievo add spec-writer',delay:1000},
-    {comment:'  Resolving dependencies...',delay:300},
-    {success:'✓ spec-writer@0.1.0 installed',delay:500},
-    {prompt:'$ ',cmd:'ievo add architect coder',delay:800},
-    {success:'✓ architect@0.1.0 installed',delay:300},
-    {success:'✓ coder@0.1.0 installed',delay:400},
-    {prompt:'$ ',cmd:'ievo run spec-writer',delay:1000},
-    {accent:'⚡ Loading memory... Ready.',delay:500},
-    {cursor:true}
-  ];
-  const body=document.getElementById('terminalBody');
-  let total=0;
-  lines.forEach((l,i)=>{
-    total+=l.delay||0;
-    setTimeout(()=>{
-      const div=document.createElement('div');
-      div.className='terminal-line';
-      div.style.animationDelay='0s';
-      if(l.cursor){div.innerHTML='<span class="prompt">$ </span><span class="cursor"></span>';}
-      else if(l.prompt){div.innerHTML=`<span class="prompt">${l.prompt}</span><span class="cmd">${l.cmd}</span>`;}
-      else if(l.comment){div.innerHTML=`<span class="comment">${l.comment}</span>`;}
-      else if(l.success){div.innerHTML=`<span class="success">${l.success}</span>`;}
-      else if(l.accent){div.innerHTML=`<span class="accent">${l.accent}</span>`;}
-      body.appendChild(div);
-      body.scrollTop=body.scrollHeight;
-    },total);
-  });
-})();
-
-// Scroll animations
-const observer=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
+// Intersection Observer — reveal blocks on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
       e.target.classList.add('visible');
     }
   });
-},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
-document.querySelectorAll('.fade-in, .fitness-fill').forEach(el=>observer.observe(el));
+}, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
 
-// Nav scroll
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50);
-});
+document.querySelectorAll('[data-block]').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
