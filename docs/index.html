@@ -156,12 +156,12 @@ a:hover{border-bottom-color:var(--cyan)}
 <!-- ===== BOOT ===== -->
 <div class="logo-block">
 <pre class="logo-ascii">
-      ███████╗██╗   ██╗ ██████╗
-  ██╗ ██╔════╝██║   ██║██╔═══██╗
-  ██║ █████╗  ██║   ██║██║   ██║
-  ██║ ██╔══╝  ╚██╗ ██╔╝██║   ██║
-  ██║ ███████╗ ╚████╔╝ ╚██████╔╝
-  ╚═╝ ╚══════╝  ╚═══╝   ╚═════╝
+ ██╗ ███████╗██╗   ██╗ ██████╗
+ ╚═╝ ██╔════╝██║   ██║██╔═══██╗
+ ██╗ █████╗  ██║   ██║██║   ██║
+ ██║ ██╔══╝  ╚██╗ ██╔╝██║   ██║
+ ██║ ███████╗ ╚████╔╝ ╚██████╔╝
+ ╚═╝ ╚══════╝  ╚═══╝   ╚═════╝
 </pre>
 <div class="logo-sub">Self-evolving AI agent framework &middot; <a href="https://ievo.ai">ievo.ai</a></div>
 </div>
@@ -239,14 +239,14 @@ a:hover{border-bottom-color:var(--cyan)}
 <div class="block" data-block>
 <pre class="diagram">
   <span class="node">┌──────────┐</span>      <span class="node">┌──────────┐</span>      <span class="node">┌──────────┐</span>
-  <span class="node">│</span> <span class="highlight">  YOU     </span><span class="node">│</span><span class="arrow"> ───▶ </span><span class="node">│</span> <span class="label">  SPEC    </span><span class="node">│</span><span class="arrow"> ───▶ </span><span class="node">│</span> <span class="label">ARCHITECT </span><span class="node">│</span>
-  <span class="node">│</span> <span class="highlight"> (ideas)  </span><span class="node">│</span>      <span class="node">│</span> <span class="label"> WRITER   </span><span class="node">│</span>      <span class="node">│</span> <span class="label"> (plans)  </span><span class="node">│</span>
+  <span class="node">│</span><span class="highlight">  YOU     </span><span class="node">│</span><span class="arrow"> ───▶ </span><span class="node">│</span><span class="label">  SPEC    </span><span class="node">│</span><span class="arrow"> ───▶ </span><span class="node">│</span><span class="label">ARCHITECT </span><span class="node">│</span>
+  <span class="node">│</span><span class="highlight"> (ideas)  </span><span class="node">│</span>      <span class="node">│</span><span class="label"> WRITER   </span><span class="node">│</span>      <span class="node">│</span><span class="label"> (plans)  </span><span class="node">│</span>
   <span class="node">└──────────┘</span>      <span class="node">└──────────┘</span>      <span class="node">└──────────┘</span>
                                             <span class="arrow">│</span>
        <span class="dim">review gate</span>                          <span class="arrow">▼</span>
   <span class="node">┌──────────┐</span>      <span class="node">┌──────────┐</span>      <span class="node">┌──────────┐</span>
-  <span class="node">│</span> <span class="highlight">  YOU     </span><span class="node">│</span><span class="arrow"> ◀─── </span><span class="node">│</span> <span class="label"> REVIEWER </span><span class="node">│</span><span class="arrow"> ◀─── </span><span class="node">│</span> <span class="label">  CODER   </span><span class="node">│</span>
-  <span class="node">│</span> <span class="highlight">(approve) </span><span class="node">│</span>      <span class="node">│</span> <span class="label">(quality) </span><span class="node">│</span>      <span class="node">│</span> <span class="label">  (TDD)   </span><span class="node">│</span>
+  <span class="node">│</span><span class="highlight">  YOU     </span><span class="node">│</span><span class="arrow"> ◀─── </span><span class="node">│</span><span class="label"> REVIEWER </span><span class="node">│</span><span class="arrow"> ◀─── </span><span class="node">│</span><span class="label">  CODER   </span><span class="node">│</span>
+  <span class="node">│</span><span class="highlight">(approve) </span><span class="node">│</span>      <span class="node">│</span><span class="label">(quality) </span><span class="node">│</span>      <span class="node">│</span><span class="label">  (TDD)   </span><span class="node">│</span>
   <span class="node">└──────────┘</span>      <span class="node">└──────────┘</span>      <span class="node">└──────────┘</span>
 </pre>
 </div>
@@ -312,10 +312,10 @@ a:hover{border-bottom-color:var(--cyan)}
   <span class="node">Agent makes mistake</span>
        <span class="arrow">│</span>
        <span class="arrow">▼</span>
-  <span class="node">┌─────────────────┐</span>
-  <span class="node">│</span> <span class="label">  EVO SKILL      </span><span class="node">│</span>   <span class="dim">Root cause analysis</span>
-  <span class="node">│</span> <span class="label">  (in every agent)</span><span class="node">│</span>   <span class="dim">Classify → Analyze → Fix</span>
-  <span class="node">└────────┬────────┘</span>
+  <span class="node">┌──────────────────┐</span>
+  <span class="node">│</span><span class="label">     EVO SKILL    </span><span class="node">│</span>   <span class="dim">Root cause analysis</span>
+  <span class="node">│</span><span class="label"> (in every agent) </span><span class="node">│</span>   <span class="dim">Classify → Analyze → Fix</span>
+  <span class="node">└────────┬─────────┘</span>
        <span class="arrow">│</span>
        <span class="arrow">├──────────▶</span> <span class="highlight">ROLE.md updated</span>   <span class="dim">(agent gets smarter)</span>
        <span class="arrow">│</span>
@@ -325,8 +325,8 @@ a:hover{border-bottom-color:var(--cyan)}
        <span class="arrow">│</span>  <span class="dim">ievo learn push (opt-in)</span>
        <span class="arrow">▼</span>
   <span class="node">┌─────────────────┐</span>
-  <span class="node">│</span> <span class="label">  CURATOR AGENT  </span><span class="node">│</span>   <span class="dim">Reads logs from ALL projects</span>
-  <span class="node">│</span> <span class="label">  (marketplace)  </span><span class="node">│</span>   <span class="dim">Finds patterns across users</span>
+  <span class="node">│</span><span class="label">  CURATOR AGENT  </span><span class="node">│</span>   <span class="dim">Reads logs from ALL projects</span>
+  <span class="node">│</span><span class="label">  (marketplace)  </span><span class="node">│</span>   <span class="dim">Finds patterns across users</span>
   <span class="node">└────────┬────────┘</span>
        <span class="arrow">│</span>
        <span class="arrow">├──────────▶</span> <span class="highlight">Genetic fitness test</span>  <span class="dim">(eval suite)</span>
@@ -428,19 +428,19 @@ a:hover{border-bottom-color:var(--cyan)}
 <div class="block" data-block>
 <pre class="diagram">
   <span class="node">┌────────────────────────────────────────────────┐</span>
-  <span class="node">│</span>               <span class="highlight">iEvo ECOSYSTEM</span>                   <span class="node">│</span>
+  <span class="node">│</span>                 <span class="highlight">iEvo ECOSYSTEM</span>                 <span class="node">│</span>
   <span class="node">│</span>                                                <span class="node">│</span>
-  <span class="node">│</span>  <span class="label">Marketplace</span>     <span class="label">Dev SDK</span>        <span class="label">CLI</span>           <span class="node">│</span>
-  <span class="node">│</span>  <span class="dim">(agents)</span>        <span class="dim">(Copier)</span>       <span class="dim">(ievo)</span>        <span class="node">│</span>
-  <span class="node">│</span>       <span class="arrow">│</span>              <span class="arrow">│</span>             <span class="arrow">│</span>           <span class="node">│</span>
-  <span class="node">│</span>       <span class="arrow">▼</span>              <span class="arrow">▼</span>             <span class="arrow">▼</span>           <span class="node">│</span>
-  <span class="node">│</span>  <span class="node">┌──────────────────────────────────────┐</span>  <span class="node">│</span>
-  <span class="node">│</span>  <span class="node">│</span>  <span class="highlight">SDD → REQs → Plan → TDD → EVO</span>      <span class="node">│</span>  <span class="node">│</span>
-  <span class="node">│</span>  <span class="node">└──────────────────────────────────────┘</span>  <span class="node">│</span>
-  <span class="node">│</span>                     <span class="arrow">│</span>                        <span class="node">│</span>
-  <span class="node">│</span>  <span class="node">┌──────────────────────────────────────┐</span>  <span class="node">│</span>
-  <span class="node">│</span>  <span class="node">│</span>  <span class="dim">Claude API │ MCP │ File System │ Git</span> <span class="node">│</span>  <span class="node">│</span>
-  <span class="node">│</span>  <span class="node">└──────────────────────────────────────┘</span>  <span class="node">│</span>
+  <span class="node">│</span>  <span class="label">Marketplace</span>      <span class="label">Dev SDK</span>        <span class="label">CLI</span>           <span class="node">│</span>
+  <span class="node">│</span>  <span class="dim">(agents)</span>         <span class="dim">(Copier)</span>       <span class="dim">(ievo)</span>        <span class="node">│</span>
+  <span class="node">│</span>       <span class="arrow">│</span>              <span class="arrow">│</span>            <span class="arrow">│</span>            <span class="node">│</span>
+  <span class="node">│</span>       <span class="arrow">▼</span>              <span class="arrow">▼</span>            <span class="arrow">▼</span>            <span class="node">│</span>
+  <span class="node">│</span>  <span class="node">┌──────────────────────────────────────────┐</span>  <span class="node">│</span>
+  <span class="node">│</span>  <span class="node">│</span>  <span class="highlight">SDD → REQs → Plan → TDD → EVO</span>          <span class="node">│</span>  <span class="node">│</span>
+  <span class="node">│</span>  <span class="node">└──────────────────────────────────────────┘</span>  <span class="node">│</span>
+  <span class="node">│</span>                       <span class="arrow">│</span>                        <span class="node">│</span>
+  <span class="node">│</span>  <span class="node">┌──────────────────────────────────────────┐</span>  <span class="node">│</span>
+  <span class="node">│</span>  <span class="node">│</span>  <span class="dim">Claude API │ MCP │ File System │ Git</span>    <span class="node">│</span>  <span class="node">│</span>
+  <span class="node">│</span>  <span class="node">└──────────────────────────────────────────┘</span>  <span class="node">│</span>
   <span class="node">└────────────────────────────────────────────────┘</span>
 </pre>
 </div>
@@ -460,7 +460,7 @@ a:hover{border-bottom-color:var(--cyan)}
 <div class="line"><span class="dim">  Discord   </span><span class="dim">coming soon</span></div>
 <div class="line"><br></div>
 <div class="line"><br></div>
-<div class="line"><span class="dim">  Built by </span><a href="https://27tech.co">27tech</a><span class="dim"> &middot; Powered by Claude</span></div>
+<div class="line"><span class="dim">  Built by </span><a href="https://ievo.ai">iEVO Team</a><span class="dim"> &middot; Powered by iEVO</span></div>
 <div class="line"><br></div>
 </div>
 
