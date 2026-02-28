@@ -140,7 +140,8 @@ a:hover{border-bottom-color:var(--cyan)}
 .glow{animation:glowPulse 3s ease-in-out infinite}
 @keyframes glowPulse{0%,100%{text-shadow:0 0 5px rgba(74,222,128,.2)}50%{text-shadow:0 0 15px rgba(74,222,128,.4)}}
 
-/* ===== EVOLUTIONS FEED ===== */
+/* ===== EVOLUTIONS FEED (inline) ===== */
+#evo-feed{width:100%}
 #evo-feed .evo-entry{margin:.6rem 0;padding:0}
 #evo-feed .evo-id{color:var(--amber);font-size:.85rem}
 #evo-feed .evo-date{color:var(--dim);font-size:.8rem;margin-left:.5rem}
@@ -153,6 +154,60 @@ a:hover{border-bottom-color:var(--cyan)}
 #evo-feed .evo-type-skill_patch .evo-id{color:var(--purple)}
 #evo-feed .evo-type-memory_update .evo-id{color:var(--cyan)}
 #evo-feed .evo-empty{color:var(--dim);font-style:italic}
+
+/* ===== EVOLUTIONS TOASTS (top bar) ===== */
+#evo-toasts{
+  position:fixed;top:0;left:0;right:0;z-index:9000;
+  display:flex;flex-direction:column;
+}
+.evo-toast{
+  background:linear-gradient(90deg, rgba(17,17,17,.97) 0%, rgba(12,12,12,.97) 100%);
+  border-bottom:1px solid var(--border);
+  border-left:3px solid var(--green);
+  padding:.5rem 2rem;
+  font-size:.8rem;line-height:1.5;
+  display:flex;align-items:center;gap:1rem;
+  opacity:0;transform:translateY(-100%);
+  animation:toastDown .5s ease forwards;
+  backdrop-filter:blur(8px);
+}
+.evo-toast.toast-out{animation:toastUp .3s ease forwards}
+.evo-toast .toast-id{font-weight:600;white-space:nowrap}
+.evo-toast .toast-title{color:var(--bright);white-space:nowrap}
+.evo-toast .toast-desc{color:var(--text);font-size:.75rem;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.evo-toast .toast-meta{color:var(--dim);font-size:.7rem;white-space:nowrap;margin-left:auto}
+.evo-toast .toast-meta a{color:var(--cyan)}
+.evo-toast .toast-close{
+  color:var(--dim);cursor:pointer;font-size:1rem;
+  padding:0 .3rem;line-height:1;transition:color .2s;flex-shrink:0;
+}
+.evo-toast .toast-close:hover{color:var(--bright)}
+
+/* Type colors */
+.evo-toast.toast-milestone{border-left-color:var(--green)}
+.evo-toast.toast-milestone .toast-id{color:var(--green)}
+.evo-toast.toast-role_patch{border-left-color:var(--amber)}
+.evo-toast.toast-role_patch .toast-id{color:var(--amber)}
+.evo-toast.toast-skill_patch{border-left-color:var(--purple)}
+.evo-toast.toast-skill_patch .toast-id{color:var(--purple)}
+.evo-toast.toast-memory_update{border-left-color:var(--cyan)}
+.evo-toast.toast-memory_update .toast-id{color:var(--cyan)}
+.evo-toast.toast-best_practice{border-left-color:var(--blue)}
+.evo-toast.toast-best_practice .toast-id{color:var(--blue)}
+
+@keyframes toastDown{
+  0%{opacity:0;transform:translateY(-100%)}
+  100%{opacity:1;transform:translateY(0)}
+}
+@keyframes toastUp{
+  0%{opacity:1;transform:translateY(0)}
+  100%{opacity:0;transform:translateY(-100%);height:0;padding:0;border:0;margin:0}
+}
+
+@media(max-width:600px){
+  .evo-toast{padding:.4rem .8rem;gap:.5rem}
+  .evo-toast .toast-desc{display:none}
+}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:768px){
@@ -174,6 +229,9 @@ a:hover{border-bottom-color:var(--cyan)}
 </style>
 </head>
 <body>
+
+<!-- Evolution toast notifications (top bar) -->
+<div id="evo-toasts"></div>
 
 <div class="screen">
 
@@ -523,35 +581,78 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[data-block]').forEach(el => observer.observe(el));
 
-// Evolutions feed — load from local evolutions.json
+// Evolutions — load data, render inline feed + toasts
 (async function loadEvolutions() {
   const feed = document.getElementById('evo-feed');
-  if (!feed) return;
+  const toastContainer = document.getElementById('evo-toasts');
+  let evolutions = [];
   try {
     const resp = await fetch('evolutions.json');
     if (!resp.ok) throw new Error('fetch failed');
-    const evolutions = await resp.json();
-    if (!evolutions.length) {
-      feed.innerHTML = '<div class="evo-empty">  No evolutions yet. Eva is watching...</div>';
-      return;
-    }
-    // Show newest first, max 20
-    const sorted = evolutions.slice().reverse().slice(0, 20);
-    feed.innerHTML = sorted.map(e => {
+    evolutions = await resp.json();
+  } catch (err) {
+    if (feed) feed.innerHTML = '<div class="evo-empty">  Evolution feed unavailable.</div>';
+    return;
+  }
+
+  if (!evolutions.length) {
+    if (feed) feed.innerHTML = '<div class="evo-empty">  No evolutions yet. Eva is watching...</div>';
+    return;
+  }
+
+  const sorted = evolutions.slice().reverse();
+
+  // Inline feed (scrollable section)
+  if (feed) {
+    feed.innerHTML = sorted.slice(0, 20).map(e => {
       const typeClass = 'evo-type-' + (e.type || 'unknown');
-      const prLink = e.pr ? ` <a href="${e.pr}" target="_blank">PR →</a>` : '';
+      const prLink = e.pr ? ` <a href="${e.pr}" target="_blank">PR &rarr;</a>` : '';
       const conf = e.confidence != null ? ` confidence: ${Math.round(e.confidence * 100)}%` : '';
       return `<div class="evo-entry ${typeClass}">` +
         `<div><span class="evo-id">${e.id}</span><span class="evo-date">${e.date}</span>` +
         `<span class="evo-title">${e.title}</span></div>` +
         (e.description ? `<div class="evo-desc">${e.description}</div>` : '') +
-        `<div class="evo-meta">${e.agent} · ${e.type}${conf}${prLink}</div>` +
+        `<div class="evo-meta">${e.agent} &middot; ${e.type}${conf}${prLink}</div>` +
         `</div>`;
     }).join('');
-  } catch (err) {
-    feed.innerHTML = '<div class="evo-empty">  Evolution feed unavailable.</div>';
+  }
+
+  // Toast notifications — last 3, top of page, staggered instantly
+  if (toastContainer) {
+    const toasts = sorted.slice(0, 3).reverse(); // oldest first so newest ends up on top
+    toasts.forEach((e, i) => {
+      setTimeout(() => {
+        const toast = document.createElement('div');
+        toast.className = `evo-toast toast-${e.type || 'unknown'}`;
+        const prLink = e.pr ? ` <a href="${e.pr}" target="_blank">PR &rarr;</a>` : '';
+        const conf = e.confidence != null ? `${Math.round(e.confidence * 100)}%` : '';
+        toast.innerHTML =
+          `<span class="toast-id">${e.id}</span>` +
+          `<span class="toast-title">${e.title}</span>` +
+          `<span class="toast-desc">${e.description || ''}</span>` +
+          `<span class="toast-meta">${e.agent} &middot; ${e.type}${conf ? ' &middot; ' + conf : ''}${prLink}</span>` +
+          `<span class="toast-close">&times;</span>`;
+
+        toast.querySelector('.toast-close').addEventListener('click', (ev) => {
+          ev.stopPropagation();
+          toast.classList.add('toast-out');
+          setTimeout(() => toast.remove(), 300);
+        });
+
+        // Auto-dismiss after 15s
+        setTimeout(() => {
+          if (toast.parentNode) {
+            toast.classList.add('toast-out');
+            setTimeout(() => toast.remove(), 300);
+          }
+        }, 15000);
+
+        toastContainer.prepend(toast);
+      }, i * 600); // staggered: 0ms, 600ms, 1200ms
+    });
   }
 })();
 </script>
+
 </body>
 </html>

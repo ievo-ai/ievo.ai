@@ -9,5 +9,27 @@
     "description": "Eva, Curator, CLI, SDK, Marketplace — initial build complete.",
     "confidence": 1.0,
     "pr": null
+  },
+  {
+    "id": "EVO-001",
+    "date": "2026-02-28",
+    "title": "Evolutions feed launched",
+    "agent": "eva",
+    "type": "role_patch",
+    "target": "ievo-ai/ievo.ai",
+    "description": "Public evolution log with toast notifications on ievo.ai.",
+    "confidence": 0.95,
+    "pr": null
+  },
+  {
+    "id": "EVO-002",
+    "date": "2026-02-28",
+    "title": "Session memory restructured",
+    "agent": "eva",
+    "type": "memory_update",
+    "target": "ievo-ai/eva",
+    "description": "HISTORY.md → index + sessions/ files for scalable agent memory.",
+    "confidence": 0.9,
+    "pr": null
   }
 ]
