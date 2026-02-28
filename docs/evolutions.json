@@ -31,5 +31,16 @@
     "description": "HISTORY.md → index + sessions/ files for scalable agent memory.",
     "confidence": 0.9,
     "pr": null
+  },
+  {
+    "id": "EVO-003",
+    "date": "2026-02-28",
+    "title": "Cross-agent fix: Cross-agent issue: bug",
+    "agent": "eva",
+    "type": "skill_patch",
+    "target": "shared/skills/evo/SKILL.md",
+    "description": "Issue affects 2 agents: cli, marketplace\n\nTag 'bug' appears in 2 agents: cli, marketplace\n\nSuggested: Update shared EVO skill to handle this pattern.",
+    "confidence": 0.56,
+    "pr": "https://github.com/ievo-ai/marketplace/pull/2"
   }
 ]
