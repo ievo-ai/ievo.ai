@@ -1,0 +1,13 @@
+[
+  {
+    "id": "EVO-000",
+    "date": "2026-02-28",
+    "title": "Platform genesis",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/*",
+    "description": "Eva, Curator, CLI, SDK, Marketplace — initial build complete.",
+    "confidence": 1.0,
+    "pr": null
+  }
+]

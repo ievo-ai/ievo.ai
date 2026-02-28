@@ -140,6 +140,20 @@ a:hover{border-bottom-color:var(--cyan)}
 .glow{animation:glowPulse 3s ease-in-out infinite}
 @keyframes glowPulse{0%,100%{text-shadow:0 0 5px rgba(74,222,128,.2)}50%{text-shadow:0 0 15px rgba(74,222,128,.4)}}
 
+/* ===== EVOLUTIONS FEED ===== */
+#evo-feed .evo-entry{margin:.6rem 0;padding:0}
+#evo-feed .evo-id{color:var(--amber);font-size:.85rem}
+#evo-feed .evo-date{color:var(--dim);font-size:.8rem;margin-left:.5rem}
+#evo-feed .evo-title{color:var(--bright);margin-left:.5rem}
+#evo-feed .evo-desc{color:var(--text);margin-left:2rem;font-size:.85rem}
+#evo-feed .evo-meta{color:var(--dim);margin-left:2rem;font-size:.8rem}
+#evo-feed .evo-meta a{color:var(--cyan);font-size:.8rem}
+#evo-feed .evo-type-milestone .evo-id{color:var(--green)}
+#evo-feed .evo-type-role_patch .evo-id{color:var(--amber)}
+#evo-feed .evo-type-skill_patch .evo-id{color:var(--purple)}
+#evo-feed .evo-type-memory_update .evo-id{color:var(--cyan)}
+#evo-feed .evo-empty{color:var(--dim);font-style:italic}
+
 /* ===== RESPONSIVE ===== */
 @media(max-width:768px){
   body{font-size:13px}
@@ -457,6 +471,22 @@ a:hover{border-bottom-color:var(--cyan)}
 
 <div class="sep" data-block>─────────────────────────────────────────────────────────────</div>
 
+<!-- ===== EVOLUTIONS ===== -->
+<div class="block" data-block>
+<div class="line"><span class="prompt">$ </span><span class="cmd">eva evolutions --live</span></div>
+</div>
+<div class="block" data-block>
+<div class="line"><br></div>
+<div class="line"><span class="bright">  Platform evolutions</span><span class="dim">  — real mutations by Eva, merged to production</span></div>
+<div class="line"><br></div>
+<div id="evo-feed">
+<div class="evo-empty">  Loading evolution feed...</div>
+</div>
+<div class="line"><br></div>
+</div>
+
+<div class="sep" data-block>─────────────────────────────────────────────────────────────</div>
+
 <!-- ===== CTA ===== -->
 <div class="block" data-block>
 <div class="line"><span class="prompt">$ </span><span class="cmd">ievo --links</span></div>
@@ -492,6 +522,36 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
 
 document.querySelectorAll('[data-block]').forEach(el => observer.observe(el));
+
+// Evolutions feed — load from local evolutions.json
+(async function loadEvolutions() {
+  const feed = document.getElementById('evo-feed');
+  if (!feed) return;
+  try {
+    const resp = await fetch('evolutions.json');
+    if (!resp.ok) throw new Error('fetch failed');
+    const evolutions = await resp.json();
+    if (!evolutions.length) {
+      feed.innerHTML = '<div class="evo-empty">  No evolutions yet. Eva is watching...</div>';
+      return;
+    }
+    // Show newest first, max 20
+    const sorted = evolutions.slice().reverse().slice(0, 20);
+    feed.innerHTML = sorted.map(e => {
+      const typeClass = 'evo-type-' + (e.type || 'unknown');
+      const prLink = e.pr ? ` <a href="${e.pr}" target="_blank">PR →</a>` : '';
+      const conf = e.confidence != null ? ` confidence: ${Math.round(e.confidence * 100)}%` : '';
+      return `<div class="evo-entry ${typeClass}">` +
+        `<div><span class="evo-id">${e.id}</span><span class="evo-date">${e.date}</span>` +
+        `<span class="evo-title">${e.title}</span></div>` +
+        (e.description ? `<div class="evo-desc">${e.description}</div>` : '') +
+        `<div class="evo-meta">${e.agent} · ${e.type}${conf}${prLink}</div>` +
+        `</div>`;
+    }).join('');
+  } catch (err) {
+    feed.innerHTML = '<div class="evo-empty">  Evolution feed unavailable.</div>';
+  }
+})();
 </script>
 </body>
 </html>
