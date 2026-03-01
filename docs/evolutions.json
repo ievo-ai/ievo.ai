@@ -152,5 +152,16 @@
     "description": "Eva now speaks in Telegram community",
     "confidence": 0.95,
     "pr": null
+  },
+  {
+    "id": "EVO-014",
+    "date": "2026-03-01",
+    "title": "Forum topics enabled",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "",
+    "description": "Evolutions now publish to dedicated forum topic",
+    "confidence": 0.9,
+    "pr": null
   }
 ]
