@@ -42,5 +42,104 @@
     "description": "Issue affects 2 agents: cli, marketplace\n\nTag 'bug' appears in 2 agents: cli, marketplace\n\nSuggested: Update shared EVO skill to handle this pattern.",
     "confidence": 0.56,
     "pr": "https://github.com/ievo-ai/marketplace/pull/2"
+  },
+  {
+    "id": "EVO-004",
+    "date": "2026-03-01",
+    "title": "E2E platform verification complete",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/cli",
+    "description": "Full pipeline verified: ievo init, ievo add (rewritten with Contents API), ievo run for all 3 agents (spec-writer, architect, coder). Bug fixed: download_agent now uses GitHub Contents API for dynamic file discovery.",
+    "confidence": 1.0,
+    "pr": null
+  },
+  {
+    "id": "EVO-005",
+    "date": "2026-03-01",
+    "title": "MkDocs documentation site launched",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "MkDocs Material site with dark/light toggle. Ecosystem docs for CLI, Marketplace, SDK, Curator. GitHub Pages deployment workflow. Cross-referenced from all repo READMEs.",
+    "confidence": 1.0,
+    "pr": null
+  },
+  {
+    "id": "EVO-006",
+    "date": "2026-03-01",
+    "title": "CLI achieves 99.56% test coverage (366 tests)",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/cli",
+    "description": "Coverage progression: 56% (161 tests) to 99.56% (366 tests) across 3 context windows. Branch coverage enabled, fail_under=99 enforced. 9 remaining branch partials are structurally unreachable.",
+    "confidence": 1.0,
+    "pr": null
+  },
+  {
+    "id": "EVO-007",
+    "date": "2026-03-01",
+    "title": "Re-read YAML files between sequential edits",
+    "agent": "eva",
+    "type": "best_practice",
+    "target": "CLAUDE.md",
+    "description": "Two sequential Edit calls on a YAML workflow file without re-reading between them created duplicate blocks, corrupting structure. Rule: always re-read YAML files between edits; verify file state after hook-blocked edits.",
+    "confidence": 0.9,
+    "pr": null
+  },
+  {
+    "id": "EVO-008",
+    "date": "2026-03-01",
+    "title": "Always assignee on issues, no sensitive data in evo logs",
+    "agent": "eva",
+    "type": "role_patch",
+    "target": "CLAUDE.md",
+    "description": "Issues created without assignee. Guessed usernames instead of looking up. Applied ievo label to human tasks. Rule: always include --assignee, look up usernames, ievo label = Eva's task only. Evolution logs must never contain sensitive information.",
+    "confidence": 0.85,
+    "pr": null
+  },
+  {
+    "id": "EVO-009",
+    "date": "2026-03-01",
+    "title": "Include .gitattributes from the first commit",
+    "agent": "eva",
+    "type": "best_practice",
+    "target": "CLAUDE.md",
+    "description": "CRLF warnings accumulated across project lifecycle. Fixed in session 006 by normalizing 43 files. Rule: always include .gitattributes with '* text=auto eol=lf' from the first commit of any new repo.",
+    "confidence": 0.95,
+    "pr": null
+  },
+  {
+    "id": "EVO-010",
+    "date": "2026-03-01",
+    "title": "Verify before acting — fact-check skill adopted",
+    "agent": "eva",
+    "type": "skill_patch",
+    "target": ".claude/skills/verify/SKILL.md",
+    "description": "Created children symlinks in wrong path, rejected meddylib fact-check skill without evaluating substance. Adopted and adapted as /verify skill for path verification, convention checking, GitHub API queries, and pattern evaluation.",
+    "confidence": 0.9,
+    "pr": null
+  },
+  {
+    "id": "EVO-011",
+    "date": "2026-03-01",
+    "title": "Incremental session bookkeeping and push after milestones",
+    "agent": "eva",
+    "type": "best_practice",
+    "target": "CLAUDE.md",
+    "description": "Session file showed stale status after Phase 2 completion. Repos had unpushed commits. Context exhaustion blocked recovery. Rule: update session file immediately after each phase; push repos after each milestone, not at session end.",
+    "confidence": 0.95,
+    "pr": null
+  },
+  {
+    "id": "EVO-012",
+    "date": "2026-03-01",
+    "title": "Enforce test coverage tooling before adding rules",
+    "agent": "eva",
+    "type": "best_practice",
+    "target": "pyproject.toml",
+    "description": "Added 100% coverage rule to CLAUDE.md but pytest-cov was not in dependencies. Command failed. Rule: ensure tooling works before adding rules. Coverage ratchet: never lower fail_under threshold.",
+    "confidence": 0.9,
+    "pr": null
   }
 ]
