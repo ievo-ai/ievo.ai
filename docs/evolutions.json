@@ -141,5 +141,16 @@
     "description": "Added 100% coverage rule to CLAUDE.md but pytest-cov was not in dependencies. Command failed. Rule: ensure tooling works before adding rules. Coverage ratchet: never lower fail_under threshold.",
     "confidence": 0.9,
     "pr": null
+  },
+  {
+    "id": "EVO-013",
+    "date": "2026-03-01",
+    "title": "Telegram integration complete",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "",
+    "description": "Eva now speaks in Telegram community",
+    "confidence": 0.95,
+    "pr": null
   }
 ]
