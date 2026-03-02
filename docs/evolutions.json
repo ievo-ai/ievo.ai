@@ -207,5 +207,16 @@
     "description": "Added evolution publishing note to CLI docstring",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/cli/pull/17"
+  },
+  {
+    "id": "EVO-019",
+    "date": "2026-03-02",
+    "title": "fix: Telegram topic routing",
+    "agent": "eva",
+    "type": "config_patch",
+    "target": "ievo-ai/eva",
+    "description": "Evolution messages now route to Evolutions topic instead of General",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/commit/90b0eff"
   }
 ]
