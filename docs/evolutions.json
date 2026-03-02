@@ -196,5 +196,16 @@
     "description": "Open source means open communication. Same transparent format for Eva and children.",
     "confidence": 0.0,
     "pr": null
+  },
+  {
+    "id": "EVO-018",
+    "date": "2026-03-02",
+    "title": "docs: evolution publishing note",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/cli",
+    "description": "Added evolution publishing note to CLI docstring",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/cli/pull/17"
   }
 ]
