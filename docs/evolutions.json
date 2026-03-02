@@ -174,5 +174,16 @@
     "description": "Every fallback doubles surface area for bugs. Build what's needed, observe failures, then add protection.",
     "confidence": 0.0,
     "pr": null
+  },
+  {
+    "id": "EVO-016",
+    "date": "2026-03-02",
+    "title": "Post-push checklist — rules without enforcement are decoration",
+    "agent": "eva",
+    "type": "role_patch",
+    "target": "",
+    "description": "Session save and evolution publish are part of the push. Not afterthoughts.",
+    "confidence": 0.0,
+    "pr": null
   }
 ]
