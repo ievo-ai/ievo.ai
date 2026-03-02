@@ -163,5 +163,16 @@
     "description": "Evolutions now publish to dedicated forum topic",
     "confidence": 0.9,
     "pr": null
+  },
+  {
+    "id": "EVO-015",
+    "date": "2026-03-02",
+    "title": "Minimal path first — Eva strips unnecessary fallbacks",
+    "agent": "eva",
+    "type": "best_practice",
+    "target": "",
+    "description": "Every fallback doubles surface area for bugs. Build what's needed, observe failures, then add protection.",
+    "confidence": 0.0,
+    "pr": null
   }
 ]
