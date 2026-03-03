@@ -240,5 +240,16 @@
     "description": "Self-update CLI: validate path components (not substrings); guard external dependencies strictly.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/cli/pull/19"
+  },
+  {
+    "id": "EVO-022",
+    "date": "2026-03-03",
+    "title": "feat: bundle marketplace content in CLI package (REQ-006)",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/cli",
+    "description": "Bundled marketplace (12 agents, 7 templates) with resilient fallback chain.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/cli/pull/20"
   }
 ]
