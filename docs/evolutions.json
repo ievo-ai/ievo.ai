@@ -251,5 +251,16 @@
     "description": "Bundled marketplace (12 agents, 7 templates) with resilient fallback chain.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/cli/pull/20"
+  },
+  {
+    "id": "EVO-023",
+    "date": "2026-03-03",
+    "title": "feat: TUI agent toggle — checkbox install/remove",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/cli",
+    "description": "TUI agent toggle: SelectionList swap for checkbox install/remove with shadowing fix and 13 tests",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/cli/pull/21"
   }
 ]
