@@ -262,5 +262,16 @@
     "description": "TUI agent toggle: SelectionList swap for checkbox install/remove with shadowing fix and 13 tests",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/cli/pull/21"
+  },
+  {
+    "id": "EVO-024",
+    "date": "2026-03-03",
+    "title": "feat: REQ-007/008 integration tests, version check, init fix, debugger agent",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/cli",
+    "description": "Fixed init guard deadlock with IEVO_MANIFEST check; added version compare with None guards.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/cli/pull/22"
   }
 ]
