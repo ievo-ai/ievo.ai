@@ -218,5 +218,16 @@
     "description": "Evolution messages now route to Evolutions topic instead of General",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/commit/90b0eff"
+  },
+  {
+    "id": "EVO-020",
+    "date": "2026-03-03",
+    "title": "feat: TUI-first CLI redesign + SDD pipeline bootstrap",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/cli",
+    "description": "TUI redesign + SDD pipeline: clean startup flow, consistent deprecation patterns, input/dep nits.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/cli/pull/18"
   }
 ]
