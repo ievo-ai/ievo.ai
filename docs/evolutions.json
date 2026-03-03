@@ -229,5 +229,16 @@
     "description": "TUI redesign + SDD pipeline: clean startup flow, consistent deprecation patterns, input/dep nits.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/cli/pull/18"
+  },
+  {
+    "id": "EVO-021",
+    "date": "2026-03-03",
+    "title": "feat: CLI self-update + startup version check",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/cli",
+    "description": "Self-update CLI: validate path components (not substrings); guard external dependencies strictly.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/cli/pull/19"
   }
 ]
