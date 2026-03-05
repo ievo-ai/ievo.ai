@@ -273,5 +273,16 @@
     "description": "Fixed init guard deadlock with IEVO_MANIFEST check; added version compare with None guards.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/cli/pull/22"
+  },
+  {
+    "id": "EVO-025",
+    "date": "2026-03-05",
+    "title": "REQ-015: Branding renames — evo→ievo, init→install, contextPaths",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/cli",
+    "description": "Bulk renames (evo→ievo) corrupted paths; validate against directory structure in refactors.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/cli/pull/23"
   }
 ]
