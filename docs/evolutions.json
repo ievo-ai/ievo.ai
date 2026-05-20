@@ -339,5 +339,16 @@
     "description": "Extend research workflow to scan ievo-ai/skills; fix eva-research.yml pipeline bugs.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/26"
+  },
+  {
+    "id": "EVO-031",
+    "date": "2026-05-20",
+    "title": "fix(eva-research): add id-token: write for claude-code-action OIDC",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Add id-token: write permission to fix claude-code-action OIDC token minting.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/27"
   }
 ]
