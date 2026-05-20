@@ -350,5 +350,16 @@
     "description": "Add id-token: write permission to fix claude-code-action OIDC token minting.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/27"
+  },
+  {
+    "id": "EVO-032",
+    "date": "2026-05-20",
+    "title": "fix(eva-research): claude_args + settings.env + skills-only MVP",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Token passing fixed: claude_args + settings.env + skills-only MVP narrows action surface.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/28"
   }
 ]
