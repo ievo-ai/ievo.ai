@@ -306,5 +306,16 @@
     "description": "Restore eva-research workflow using official anthropics/claude-code-action@v1 with secure OAuth.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/22"
+  },
+  {
+    "id": "EVO-028",
+    "date": "2026-05-20",
+    "title": "chore(telegram): disable evolution publish on PR approve",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Disable PR-approve evolution publish to prevent Telegram flood from multi-repo self-evolutions.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/23"
   }
 ]
