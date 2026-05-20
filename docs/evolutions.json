@@ -383,5 +383,16 @@
     "description": "Enable full workflow output to debug Researcher's silent operation failures.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/30"
+  },
+  {
+    "id": "EVO-035",
+    "date": "2026-05-20",
+    "title": "feat(eva-research): persistent audit memory across runs",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Eva's audit memory now persists across runs, enabling cross-run pattern detection and improvement curves.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/31"
   }
 ]
