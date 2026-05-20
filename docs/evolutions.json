@@ -361,5 +361,16 @@
     "description": "Token passing fixed: claude_args + settings.env + skills-only MVP narrows action surface.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/28"
+  },
+  {
+    "id": "EVO-033",
+    "date": "2026-05-20",
+    "title": "docs(rules): add \"verify docs before asserting tool/library behavior\"",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Add rule: verify docs before asserting tool/library behavior to prevent API drift",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/29"
   }
 ]
