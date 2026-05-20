@@ -317,5 +317,16 @@
     "description": "Disable PR-approve evolution publish to prevent Telegram flood from multi-repo self-evolutions.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/23"
+  },
+  {
+    "id": "EVO-029",
+    "date": "2026-05-20",
+    "title": "feat(publish-evolution): trigger on real merge into main",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Make publish-on-merge structural: GitHub events enforce invariant vs. defeatable caller-side policy.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/25"
   }
 ]
