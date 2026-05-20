@@ -295,5 +295,16 @@
     "description": "Atomic Cortex download with tarfile path-traversal protection and graceful fallback.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/cli/pull/25"
+  },
+  {
+    "id": "EVO-027",
+    "date": "2026-05-20",
+    "title": "fix(eva-research): use anthropics/claude-code-action@v1 (was: claude not found)",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Restore eva-research workflow using official anthropics/claude-code-action@v1 with secure OAuth.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/22"
   }
 ]
