@@ -328,5 +328,16 @@
     "description": "Make publish-on-merge structural: GitHub events enforce invariant vs. defeatable caller-side policy.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/25"
+  },
+  {
+    "id": "EVO-030",
+    "date": "2026-05-20",
+    "title": "feat(research): extend Eva research workflow to scan skills repo + open PRs",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Extend research workflow to scan ievo-ai/skills; fix eva-research.yml pipeline bugs.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/26"
   }
 ]
