@@ -603,5 +603,16 @@
     "description": "Hard-enforce eva-research steps 4b.1/4b.3/6/7 via pre-exit verification gates.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/52"
+  },
+  {
+    "id": "EVO-055",
+    "date": "2026-05-22",
+    "title": "feat(eva-on-issue): Claude-action Issue Triage helper (closes #42)",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Dark-mode to light-mode: Eva's issue triage moved from silent logs to observable Claude comments.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/51"
   }
 ]
