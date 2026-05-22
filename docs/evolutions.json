@@ -471,5 +471,16 @@
     "description": "Structural mutation: partitioned Eva's knowledge into identity (agent/) and output (researches/).",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/38"
+  },
+  {
+    "id": "EVO-043",
+    "date": "2026-05-22",
+    "title": "research: audit 2026-05-22-1054",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Audit surfaced CLAUDE_CODE_SUBAGENT_MODEL security gap and codex extension diagnostics.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/40"
   }
 ]
