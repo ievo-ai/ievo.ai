@@ -614,5 +614,16 @@
     "description": "Dark-mode to light-mode: Eva's issue triage moved from silent logs to observable Claude comments.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/51"
+  },
+  {
+    "id": "EVO-056",
+    "date": "2026-05-22",
+    "title": "research: audit 2026-05-22-1734",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Audit-driven resilience: backfill recovery mechanism + evolution state visibility",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/53"
   }
 ]
