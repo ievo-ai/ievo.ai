@@ -592,5 +592,16 @@
     "description": "Document required workflows:write permission to prevent future GitHub App auth outages.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/50"
+  },
+  {
+    "id": "EVO-054",
+    "date": "2026-05-22",
+    "title": "fix(eva-research): hard enforce Steps 4b.1/4b.3/6/7 with pre-exit verification",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Hard-enforce eva-research steps 4b.1/4b.3/6/7 via pre-exit verification gates.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/52"
   }
 ]
