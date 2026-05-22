@@ -570,5 +570,16 @@
     "description": "Clarified credit-contributors rule to prevent agents posting in contributor repos instead of our own",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/46"
+  },
+  {
+    "id": "EVO-052",
+    "date": "2026-05-22",
+    "title": "feat(eva-research): switch to findings-first flow (detailed issues, no PR scaffolding)",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Mutation: findings-first research (detailed issues replace PR scaffolding)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/49"
   }
 ]
