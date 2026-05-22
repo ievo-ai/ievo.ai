@@ -405,5 +405,16 @@
     "description": "Daily eva-research audit accelerates drift detection from 6-day to 24-hour lag.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/32"
+  },
+  {
+    "id": "EVO-037",
+    "date": "2026-05-22",
+    "title": "fix(eva-research): remove --max-turns cap",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Turn cap lifted—cost ceiling now the real constraint, not step maximums.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/33"
   }
 ]
