@@ -394,5 +394,16 @@
     "description": "Eva's audit memory now persists across runs, enabling cross-run pattern detection and improvement curves.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/31"
+  },
+  {
+    "id": "EVO-036",
+    "date": "2026-05-22",
+    "title": "chore(eva-research): switch from weekly to daily cron",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Daily eva-research audit accelerates drift detection from 6-day to 24-hour lag.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/32"
   }
 ]
