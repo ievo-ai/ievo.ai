@@ -493,5 +493,16 @@
     "description": "Eva triggers on draft→ready without code changes",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/39"
+  },
+  {
+    "id": "EVO-045",
+    "date": "2026-05-22",
+    "title": "chore: deprecate eva-on-issue.yml (legacy Docker scan)",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Remove eva-on-issue.yml: structurally inert (dead dispatch, dry-run-only).",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/41"
   }
 ]
