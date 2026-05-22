@@ -537,5 +537,16 @@
     "description": "Block fork PR auto-merge via trust filter, preventing supply chain injection attacks.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/44"
+  },
+  {
+    "id": "EVO-049",
+    "date": "2026-05-22",
+    "title": "fix(role): add symmetric recursive verification rule (closes #43)",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Symmetric recursive verification for cited paths prevents false negatives in subdirectories",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/47"
   }
 ]
