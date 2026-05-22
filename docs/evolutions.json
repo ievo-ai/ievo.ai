@@ -581,5 +581,16 @@
     "description": "Mutation: findings-first research (detailed issues replace PR scaffolding)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/49"
+  },
+  {
+    "id": "EVO-053",
+    "date": "2026-05-22",
+    "title": "docs(eva-review-pr): document required workflows:write App permission",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Document required workflows:write permission to prevent future GitHub App auth outages.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/50"
   }
 ]
