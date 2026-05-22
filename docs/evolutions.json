@@ -438,5 +438,16 @@
     "description": "Proposal bifurcation: audit fixes ship as PRs; capability gaps surface as `eva-proposal` issues.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/35"
+  },
+  {
+    "id": "EVO-040",
+    "date": "2026-05-22",
+    "title": "research(audit): ievo-ai/skills audit 2026-05-22 session 2",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Close coverage gap: audit scan_repo.mjs to required standard (v0.6.7)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/36"
   }
 ]
