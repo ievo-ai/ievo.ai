@@ -559,5 +559,16 @@
     "description": "Discovered: GitHub's author_association is per-PR, not per-role; defeats role-based filtering.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/48"
+  },
+  {
+    "id": "EVO-051",
+    "date": "2026-05-22",
+    "title": "docs(CLAUDE.md): clarify credit-contributors rule — OUR repo with @-mention, not theirs",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Clarified credit-contributors rule to prevent agents posting in contributor repos instead of our own",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/46"
   }
 ]
