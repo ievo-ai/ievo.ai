@@ -416,5 +416,16 @@
     "description": "Turn cap lifted—cost ceiling now the real constraint, not step maximums.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/33"
+  },
+  {
+    "id": "EVO-038",
+    "date": "2026-05-22",
+    "title": "research: audit 2026-05-22-0721",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Automated skills auditor deployed; first run found 2 doc/permission issues",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/34"
   }
 ]
