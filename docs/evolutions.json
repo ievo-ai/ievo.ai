@@ -647,5 +647,16 @@
     "description": "REQUEST_CHANGES default on review failure to prevent rubber-stamping broken PRs.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/59"
+  },
+  {
+    "id": "EVO-059",
+    "date": "2026-05-23",
+    "title": "fix(eva-review-pr): use workflow_run.pull_requests[] for PR lookup (head_sha is merge commit)",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Eva's PR review workflow now uses pull_requests[] instead of head_sha, fixing silent review skips.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/60"
   }
 ]
