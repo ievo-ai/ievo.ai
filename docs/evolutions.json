@@ -625,5 +625,16 @@
     "description": "Audit-driven resilience: backfill recovery mechanism + evolution state visibility",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/53"
+  },
+  {
+    "id": "EVO-057",
+    "date": "2026-05-23",
+    "title": "docs: smoke marker for PR Review verification (non-workflow PR path)",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Smoke test passed: PR Review applies to docs changes on non-workflow PR paths.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/58"
   }
 ]
