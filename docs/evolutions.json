@@ -658,5 +658,16 @@
     "description": "Eva's PR review workflow now uses pull_requests[] instead of head_sha, fixing silent review skips.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/60"
+  },
+  {
+    "id": "EVO-060",
+    "date": "2026-05-23",
+    "title": "docs: smoke test marker for non-sensitive auto-merge path",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Validate Eva's sensitive-path check: auto-merges safe docs, blocks workflows.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/61"
   }
 ]
