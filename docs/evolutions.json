@@ -636,5 +636,16 @@
     "description": "Smoke test passed: PR Review applies to docs changes on non-workflow PR paths.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/58"
+  },
+  {
+    "id": "EVO-058",
+    "date": "2026-05-23",
+    "title": "feat(eva-review-pr): safety strengthening — REQUEST_CHANGES default + sensitive-path gate",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "REQUEST_CHANGES default on review failure to prevent rubber-stamping broken PRs.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/59"
   }
 ]
