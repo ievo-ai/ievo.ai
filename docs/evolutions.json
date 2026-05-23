@@ -669,5 +669,16 @@
     "description": "Validate Eva's sensitive-path check: auto-merges safe docs, blocks workflows.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/61"
+  },
+  {
+    "id": "EVO-061",
+    "date": "2026-05-23",
+    "title": "test: smoke for sensitive-path gate on .github/workflows/",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Gated .github/workflows/ changes to require manual operator approval via sensitive-path detection.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/63"
   }
 ]
