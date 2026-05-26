@@ -680,5 +680,16 @@
     "description": "Gated .github/workflows/ changes to require manual operator approval via sensitive-path detection.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/63"
+  },
+  {
+    "id": "EVO-062",
+    "date": "2026-05-26",
+    "title": "research: audit 2026-05-25-0748",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Skills audit uncovered metadata gaps and source drift; 3 structural issues filed for standardization.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/66"
   }
 ]
