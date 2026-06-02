@@ -691,5 +691,16 @@
     "description": "Skills audit uncovered metadata gaps and source drift; 3 structural issues filed for standardization.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/66"
+  },
+  {
+    "id": "EVO-063",
+    "date": "2026-06-02",
+    "title": "research: audit 2026-05-24-0723",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Automated spec-compliance audit detects violations; merged fix, 2 features filed.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/64"
   }
 ]
