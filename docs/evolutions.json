@@ -724,5 +724,16 @@
     "description": "Automated audit surfaced 3 improvements for skills repo: security + hooks sync.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/68"
+  },
+  {
+    "id": "EVO-066",
+    "date": "2026-06-02",
+    "title": "research: audit 2026-05-28-0740",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Audit revealed undocumented Codex hook types affecting skills positioning.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/69"
   }
 ]
