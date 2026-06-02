@@ -757,5 +757,16 @@
     "description": "Audit of ievo-ai/skills v0.13.0 surfaced 3 compliance findings needing evolution.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/71"
+  },
+  {
+    "id": "EVO-069",
+    "date": "2026-06-02",
+    "title": "research: audit 2026-05-31-0743",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Audit validates compliance; discovers Claude Code v2.1.157 plugin auto-load; files 3 findings.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/72"
   }
 ]
