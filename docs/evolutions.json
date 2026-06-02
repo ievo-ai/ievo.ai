@@ -768,5 +768,16 @@
     "description": "Audit validates compliance; discovers Claude Code v2.1.157 plugin auto-load; files 3 findings.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/72"
+  },
+  {
+    "id": "EVO-070",
+    "date": "2026-06-02",
+    "title": "research: audit 2026-06-01-0808",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Extend source coverage to Claude Code docs; audit marketplace quality, coverage, and versions.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/73"
   }
 ]
