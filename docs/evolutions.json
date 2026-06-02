@@ -779,5 +779,16 @@
     "description": "Extend source coverage to Claude Code docs; audit marketplace quality, coverage, and versions.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/73"
+  },
+  {
+    "id": "EVO-071",
+    "date": "2026-06-02",
+    "title": "research: audit 2026-06-02-0809",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Skills-repo audit: version acceleration (0.9→0.15/6d) exposed integration doc gaps; 3 issues filed.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/74"
   }
 ]
