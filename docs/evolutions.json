@@ -735,5 +735,16 @@
     "description": "Audit revealed undocumented Codex hook types affecting skills positioning.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/69"
+  },
+  {
+    "id": "EVO-067",
+    "date": "2026-06-02",
+    "title": "research: audit 2026-05-29-0738",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Research audit discovered 3 skill documentation gaps, filed as improvement issues.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/70"
   }
 ]
