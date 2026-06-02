@@ -702,5 +702,16 @@
     "description": "Automated spec-compliance audit detects violations; merged fix, 2 features filed.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/64"
+  },
+  {
+    "id": "EVO-064",
+    "date": "2026-06-02",
+    "title": "research: audit 2026-05-26-0737",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Marketplace growth: 3 new skills + automated versioning via release-please",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/67"
   }
 ]
