@@ -746,5 +746,16 @@
     "description": "Research audit discovered 3 skill documentation gaps, filed as improvement issues.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/70"
+  },
+  {
+    "id": "EVO-068",
+    "date": "2026-06-02",
+    "title": "research: audit 2026-05-30-0711",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Audit of ievo-ai/skills v0.13.0 surfaced 3 compliance findings needing evolution.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/71"
   }
 ]
