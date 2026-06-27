@@ -911,5 +911,16 @@
     "description": "feat(ci): 👀 reaction on comment-triggered workflows (v0.30.0)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/253"
+  },
+  {
+    "id": "EVO-083",
+    "date": "2026-06-27",
+    "title": "ievo-ai/skills v0.31.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "docs(migration): Claude Code ↔ Codex cross-platform migration path (v0.31.0)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/254"
   }
 ]
