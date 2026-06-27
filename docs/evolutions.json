@@ -889,5 +889,16 @@
     "description": "refactor(init): split SKILL.md into progressive-disclosure references (v0.28.0)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/251"
+  },
+  {
+    "id": "EVO-081",
+    "date": "2026-06-27",
+    "title": "ievo-ai/skills v0.29.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat(security): handler ignores non-member comment bodies — prompt-injection defense (v0.29.0)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/252"
   }
 ]
