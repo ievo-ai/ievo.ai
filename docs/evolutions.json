@@ -845,5 +845,16 @@
     "description": "Child releases now trigger eva's Telegram announcements via repository_dispatch pattern.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/103"
+  },
+  {
+    "id": "EVO-077",
+    "date": "2026-06-27",
+    "title": "fix(telegram): show Confidence only for real proposal scores, not a constant shipped 100%",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Fix Telegram confidence display: hide meaningless shipped 100%, show real proposal scores.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/104"
   }
 ]
