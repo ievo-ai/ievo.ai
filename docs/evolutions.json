@@ -867,5 +867,16 @@
     "description": "feat(ci): notify-release — announce skills releases to community Telegram via eva (v0.26.0)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/249"
+  },
+  {
+    "id": "EVO-079",
+    "date": "2026-06-27",
+    "title": "ievo-ai/skills v0.27.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix(ci): issue-discussion trigger handle @ievo -> @ievo-ai (v0.27.0)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/250"
   }
 ]
