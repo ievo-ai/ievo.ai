@@ -812,5 +812,16 @@
     "description": "Skills repo audit: detected 7-version acceleration in 25 days, filed 3 issues.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/100"
+  },
+  {
+    "id": "EVO-074",
+    "date": "2026-06-27",
+    "title": "fix(eva-research): create issues + PRs as the ievo-eva App, not the operator PAT",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Standardize eva-research to use ievo-eva App auth instead of operator PAT for consistency.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/101"
   }
 ]
