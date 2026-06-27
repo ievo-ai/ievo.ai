@@ -856,5 +856,16 @@
     "description": "Fix Telegram confidence display: hide meaningless shipped 100%, show real proposal scores.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/104"
+  },
+  {
+    "id": "EVO-078",
+    "date": "2026-06-27",
+    "title": "ievo-ai/skills v0.26.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat(ci): notify-release — announce skills releases to community Telegram via eva (v0.26.0)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/249"
   }
 ]
