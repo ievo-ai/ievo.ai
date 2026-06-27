@@ -834,5 +834,16 @@
     "description": "Mandatory subject-key dedup + silent-label audit fix reduces eva-research noise 30%.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/102"
+  },
+  {
+    "id": "EVO-076",
+    "date": "2026-06-27",
+    "title": "feat(publish-evolution): accept repository_dispatch(child-release) for cross-repo Telegram announce",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Child releases now trigger eva's Telegram announcements via repository_dispatch pattern.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/103"
   }
 ]
