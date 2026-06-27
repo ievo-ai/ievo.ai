@@ -823,5 +823,16 @@
     "description": "Standardize eva-research to use ievo-eva App auth instead of operator PAT for consistency.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/101"
+  },
+  {
+    "id": "EVO-075",
+    "date": "2026-06-27",
+    "title": "fix(eva-research): subject-key dedup + silent-label routine audit reports",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Mandatory subject-key dedup + silent-label audit fix reduces eva-research noise 30%.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/102"
   }
 ]
