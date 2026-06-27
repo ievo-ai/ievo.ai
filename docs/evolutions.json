@@ -900,5 +900,16 @@
     "description": "feat(security): handler ignores non-member comment bodies — prompt-injection defense (v0.29.0)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/252"
+  },
+  {
+    "id": "EVO-082",
+    "date": "2026-06-27",
+    "title": "ievo-ai/skills v0.30.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat(ci): 👀 reaction on comment-triggered workflows (v0.30.0)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/253"
   }
 ]
