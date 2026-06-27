@@ -801,5 +801,16 @@
     "description": "Exempt audit research files from sensitive-path gate to enable auto-merge.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/75"
+  },
+  {
+    "id": "EVO-073",
+    "date": "2026-06-27",
+    "title": "research: audit 2026-06-27-0721",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/eva",
+    "description": "Skills repo audit: detected 7-version acceleration in 25 days, filed 3 issues.",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/eva/pull/100"
   }
 ]
