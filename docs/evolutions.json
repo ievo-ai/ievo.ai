@@ -922,5 +922,16 @@
     "description": "docs(migration): Claude Code ↔ Codex cross-platform migration path (v0.31.0)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/254"
+  },
+  {
+    "id": "EVO-084",
+    "date": "2026-06-27",
+    "title": "ievo-ai/skills v0.32.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix(security): harden security skills + auditor — model pin, tool denylists, secrets scan (v0.32.0)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/255"
   }
 ]
