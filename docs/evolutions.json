@@ -944,5 +944,16 @@
     "description": "feat(discover): Codex marketplace as a second discovery source (#196)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/256"
+  },
+  {
+    "id": "EVO-086",
+    "date": "2026-06-28",
+    "title": "ievo-ai/skills v0.34.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: add fable to validate_skills.mjs ALLOWED_MODELS (parity with validate_agents.mjs v0.21.0)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/263"
   }
 ]
