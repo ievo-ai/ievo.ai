@@ -933,5 +933,16 @@
     "description": "fix(security): harden security skills + auditor — model pin, tool denylists, secrets scan (v0.32.0)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/255"
+  },
+  {
+    "id": "EVO-085",
+    "date": "2026-06-28",
+    "title": "ievo-ai/skills v0.33.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat(discover): Codex marketplace as a second discovery source (#196)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/256"
   }
 ]
