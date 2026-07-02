@@ -999,5 +999,16 @@
     "description": "docs: document /rewind as same-session context-recovery alternative in handoff (#265)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/285"
+  },
+  {
+    "id": "EVO-091",
+    "date": "2026-07-02",
+    "title": "ievo-ai/skills v0.39.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: auto-update path — native auto-update recommendation + optional SessionStart nudge (#247)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/287"
   }
 ]
