@@ -966,5 +966,16 @@
     "description": "Evolve issue triage to router: add structured verdict markers for routing clarity.",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/eva/pull/107"
+  },
+  {
+    "id": "EVO-088",
+    "date": "2026-07-02",
+    "title": "ievo-ai/skills v0.35.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "docs: document Notification hook (agent_needs_input / agent_completed) in hooks-setup (#281)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/282"
   }
 ]
