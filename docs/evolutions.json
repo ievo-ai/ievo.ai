@@ -988,5 +988,16 @@
     "description": "feat: add disable-model-invocation to heavyweight iEvo skills (#270)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/284"
+  },
+  {
+    "id": "EVO-090",
+    "date": "2026-07-02",
+    "title": "ievo-ai/skills v0.37.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "docs: document /rewind as same-session context-recovery alternative in handoff (#265)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/285"
   }
 ]
