@@ -1021,5 +1021,16 @@
     "description": "feat: add disallowedTools: to deep-reviewer agent for read-only defense-in-depth (#266)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/286"
+  },
+  {
+    "id": "EVO-093",
+    "date": "2026-07-03",
+    "title": "ievo-ai/skills v0.41.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: guard dated append-only records against silent rot (#289)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/290"
   }
 ]
