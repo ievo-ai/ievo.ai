@@ -1098,5 +1098,16 @@
     "description": "feat: offer a feedback → evolution local-mitigation handoff (#305)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/307"
+  },
+  {
+    "id": "EVO-100",
+    "date": "2026-07-04",
+    "title": "ievo-ai/skills v0.46.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: host /ievo:evolution project marker where Codex can read it (#304)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/309"
   }
 ]
