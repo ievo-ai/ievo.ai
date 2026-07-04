@@ -1087,5 +1087,16 @@
     "description": "feat: auto-evolution correction-capture hook + accumulator + SessionStart nudge (#302)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/303"
+  },
+  {
+    "id": "EVO-099",
+    "date": "2026-07-04",
+    "title": "ievo-ai/skills v0.46.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: offer a feedback → evolution local-mitigation handoff (#305)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/307"
   }
 ]
