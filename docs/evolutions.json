@@ -1076,5 +1076,16 @@
     "description": "feat: add /ievo:evo-auto-enable + /ievo:evo-auto-disable toggle skills (#293)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/301"
+  },
+  {
+    "id": "EVO-098",
+    "date": "2026-07-04",
+    "title": "ievo-ai/skills v0.45.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: auto-evolution correction-capture hook + accumulator + SessionStart nudge (#302)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/303"
   }
 ]
