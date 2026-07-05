@@ -1120,5 +1120,16 @@
     "description": "fix: realign /ievo:schedule with the documented Routines surface (#310)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/311"
+  },
+  {
+    "id": "EVO-102",
+    "date": "2026-07-05",
+    "title": "ievo-ai/skills v0.46.3",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: add disallowedTools to vuln-scanner.md for defense-in-depth consistency (#312)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/313"
   }
 ]
