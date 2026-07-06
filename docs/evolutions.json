@@ -1197,5 +1197,16 @@
     "description": "fix: document CC v2.1.193 autoMode.classifyAllShell interaction in init/SKILL.md (#257)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/333"
+  },
+  {
+    "id": "EVO-109",
+    "date": "2026-07-06",
+    "title": "ievo-ai/skills v0.48.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: add zero-setup hooks frontmatter to evo, security-check, init (#159)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/335"
   }
 ]
