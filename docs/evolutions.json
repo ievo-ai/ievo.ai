@@ -1186,5 +1186,16 @@
     "description": "fix: rename /ievo:evolution invocation to /ievo:evo (#329)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/331"
+  },
+  {
+    "id": "EVO-108",
+    "date": "2026-07-06",
+    "title": "ievo-ai/skills v0.47.5",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: document CC v2.1.193 autoMode.classifyAllShell interaction in init/SKILL.md (#257)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/333"
   }
 ]
