@@ -1208,5 +1208,16 @@
     "description": "feat: add zero-setup hooks frontmatter to evo, security-check, init (#159)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/335"
+  },
+  {
+    "id": "EVO-110",
+    "date": "2026-07-06",
+    "title": "ievo-ai/skills v0.49.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: detect client surface via model reasoning in feedback + version (#328)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/336"
   }
 ]
