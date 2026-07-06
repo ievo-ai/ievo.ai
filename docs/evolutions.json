@@ -1153,5 +1153,16 @@
     "description": "fix: preload vuln-scan skill into vuln-scanner.md via skills: frontmatter (#317)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/318"
+  },
+  {
+    "id": "EVO-105",
+    "date": "2026-07-06",
+    "title": "ievo-ai/skills v0.47.2",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: /ievo:version names the plugin explicitly in the update command (#319)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/323"
   }
 ]
