@@ -1219,5 +1219,16 @@
     "description": "feat: detect client surface via model reasoning in feedback + version (#328)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/336"
+  },
+  {
+    "id": "EVO-111",
+    "date": "2026-07-06",
+    "title": "ievo-ai/skills v0.49.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: document CC v2.1.195 external plugin install consent gate (#264)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/337"
   }
 ]
