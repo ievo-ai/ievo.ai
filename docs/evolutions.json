@@ -1131,5 +1131,16 @@
     "description": "fix: add disallowedTools to vuln-scanner.md for defense-in-depth consistency (#312)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/313"
+  },
+  {
+    "id": "EVO-103",
+    "date": "2026-07-06",
+    "title": "ievo-ai/skills v0.47.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: add stack-independent meta-tooling query group to discover.mjs (#315)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/316"
   }
 ]
