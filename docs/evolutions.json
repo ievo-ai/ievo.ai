@@ -1175,5 +1175,16 @@
     "description": "fix: warn that plugin skills need the full ievo: prefix (#325)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/326"
+  },
+  {
+    "id": "EVO-107",
+    "date": "2026-07-06",
+    "title": "ievo-ai/skills v0.47.4",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: rename /ievo:evolution invocation to /ievo:evo (#329)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/331"
   }
 ]
