@@ -1241,5 +1241,16 @@
     "description": "fix: make /ievo:version's update instruction scope-aware (#332)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/338"
+  },
+  {
+    "id": "EVO-113",
+    "date": "2026-07-07",
+    "title": "ievo-ai/skills v0.49.3",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: reject CWE-22 path-traversal payloads in scan_repo.mjs's --repo argument (#339)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/342"
   }
 ]
