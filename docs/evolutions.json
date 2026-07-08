@@ -1252,5 +1252,16 @@
     "description": "fix: reject CWE-22 path-traversal payloads in scan_repo.mjs's --repo argument (#339)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/342"
+  },
+  {
+    "id": "EVO-114",
+    "date": "2026-07-08",
+    "title": "ievo-ai/skills v0.50.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: vendor /consolidate + evo overlay-extraction offer (#345)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/346"
   }
 ]
