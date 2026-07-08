@@ -1285,5 +1285,16 @@
     "description": "fix: neutralize markdown image/link syntax in security-auditor's public report excerpts (#350)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/352"
+  },
+  {
+    "id": "EVO-117",
+    "date": "2026-07-08",
+    "title": "ievo-ai/skills v0.50.3",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: validate ref/path allowlist in inspect/SKILL.md before Bash interpolation (#348)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/353"
   }
 ]
