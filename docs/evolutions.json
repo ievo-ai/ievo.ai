@@ -1263,5 +1263,16 @@
     "description": "feat: vendor /consolidate + evo overlay-extraction offer (#345)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/346"
+  },
+  {
+    "id": "EVO-115",
+    "date": "2026-07-08",
+    "title": "ievo-ai/skills v0.50.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: gate /ievo:update refresh behind a security re-audit when content changed (#349)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/351"
   }
 ]
