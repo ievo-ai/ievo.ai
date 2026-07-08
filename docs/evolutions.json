@@ -1296,5 +1296,16 @@
     "description": "fix: validate ref/path allowlist in inspect/SKILL.md before Bash interpolation (#348)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/353"
+  },
+  {
+    "id": "EVO-118",
+    "date": "2026-07-08",
+    "title": "ievo-ai/skills v0.50.4",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: replace security-check/SKILL.md's per-file gh api fetch with clone+Read (#347)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/354"
   }
 ]
