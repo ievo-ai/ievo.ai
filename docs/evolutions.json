@@ -1274,5 +1274,16 @@
     "description": "fix: gate /ievo:update refresh behind a security re-audit when content changed (#349)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/351"
+  },
+  {
+    "id": "EVO-116",
+    "date": "2026-07-08",
+    "title": "ievo-ai/skills v0.50.2",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: neutralize markdown image/link syntax in security-auditor's public report excerpts (#350)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/352"
   }
 ]
