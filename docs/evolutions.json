@@ -1340,5 +1340,16 @@
     "description": "docs: add Cursor hooks section to hooks-setup/SKILL.md (#367)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/369"
+  },
+  {
+    "id": "EVO-122",
+    "date": "2026-07-12",
+    "title": "ievo-ai/skills v0.51.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: escape Markdown table/code-span control chars in scan_repo.mjs (#365)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/370"
   }
 ]
