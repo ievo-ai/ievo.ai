@@ -1318,5 +1318,16 @@
     "description": "fix: replace evo/SKILL.md's per-file gh api vendor fetch with clone+Read/Write (#355)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/358"
+  },
+  {
+    "id": "EVO-120",
+    "date": "2026-07-12",
+    "title": "ievo-ai/skills v0.50.7",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: replace evolution.md's gh api vendor fetch with clone+Read/Write (#366)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/368"
   }
 ]
