@@ -1351,5 +1351,16 @@
     "description": "fix: escape Markdown table/code-span control chars in scan_repo.mjs (#365)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/370"
+  },
+  {
+    "id": "EVO-123",
+    "date": "2026-07-13",
+    "title": "ievo-ai/skills v0.51.2",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: never interpolate correction text into a Bash arg in evo-auto-enable's hook (#373)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/375"
   }
 ]
