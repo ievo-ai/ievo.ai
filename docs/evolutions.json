@@ -1362,5 +1362,16 @@
     "description": "fix: never interpolate correction text into a Bash arg in evo-auto-enable's hook (#373)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/375"
+  },
+  {
+    "id": "EVO-124",
+    "date": "2026-07-13",
+    "title": "ievo-ai/skills v0.51.3",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: guard scan_repo.mjs readFileSync sites against oversized files (#374)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/376"
   }
 ]
