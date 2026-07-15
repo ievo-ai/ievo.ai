@@ -1406,5 +1406,16 @@
     "description": "feat: add /ievo:extract-best-practices — session pattern mining + optional upstream sharing (#387)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/389"
+  },
+  {
+    "id": "EVO-128",
+    "date": "2026-07-15",
+    "title": "ievo-ai/skills v0.52.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: validate owner/repo in index-repos before Bash invocation (#356)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/390"
   }
 ]
