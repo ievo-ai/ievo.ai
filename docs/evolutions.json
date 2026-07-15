@@ -1395,5 +1395,16 @@
     "description": "fix: add required command field to evo-auto-enable's generated hooks (#384)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/388"
+  },
+  {
+    "id": "EVO-127",
+    "date": "2026-07-15",
+    "title": "ievo-ai/skills v0.52.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: add /ievo:extract-best-practices — session pattern mining + optional upstream sharing (#387)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/389"
   }
 ]
