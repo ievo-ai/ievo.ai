@@ -1417,5 +1417,16 @@
     "description": "fix: validate owner/repo in index-repos before Bash invocation (#356)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/390"
+  },
+  {
+    "id": "EVO-129",
+    "date": "2026-07-16",
+    "title": "ievo-ai/skills v0.52.2",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: guard validate_skills/validate_agents readFileSync against oversized/unsafe files (#391)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/394"
   }
 ]
