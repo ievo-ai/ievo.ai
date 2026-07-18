@@ -1450,5 +1450,16 @@
     "description": "feat: extend evo Step 5.7 extraction offer to agent/skill-scope overlays (#395)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/397"
+  },
+  {
+    "id": "EVO-132",
+    "date": "2026-07-18",
+    "title": "ievo-ai/skills v0.54.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: consolidate entry-cluster mode Option E5 — delete in-place-consolidated entries (#385)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/399"
   }
 ]
