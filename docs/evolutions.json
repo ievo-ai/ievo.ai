@@ -1428,5 +1428,16 @@
     "description": "fix: guard validate_skills/validate_agents readFileSync against oversized/unsafe files (#391)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/394"
+  },
+  {
+    "id": "EVO-130",
+    "date": "2026-07-18",
+    "title": "ievo-ai/skills v0.52.3",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: parseFrontmatter consumes block/folded scalar bodies (#392)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/396"
   }
 ]
