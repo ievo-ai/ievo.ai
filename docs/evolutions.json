@@ -1483,5 +1483,16 @@
     "description": "fix: bound security-auditor Bash by a closed command-template allowlist (#400)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/406"
+  },
+  {
+    "id": "EVO-135",
+    "date": "2026-07-22",
+    "title": "ievo-ai/skills v0.54.3",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: close CWE-78 gh api injection in update.md vendor fetch (#362)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/408"
   }
 ]
