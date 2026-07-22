@@ -1494,5 +1494,16 @@
     "description": "fix: close CWE-78 gh api injection in update.md vendor fetch (#362)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/408"
+  },
+  {
+    "id": "EVO-136",
+    "date": "2026-07-22",
+    "title": "ievo-ai/skills v0.54.4",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: symlink-safe enumeration in scan_repo.mjs (#363)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/409"
   }
 ]
