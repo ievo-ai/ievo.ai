@@ -1461,5 +1461,16 @@
     "description": "feat: consolidate entry-cluster mode Option E5 — delete in-place-consolidated entries (#385)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/399"
+  },
+  {
+    "id": "EVO-133",
+    "date": "2026-07-22",
+    "title": "ievo-ai/skills v0.54.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: add excerpt-containment rule to vuln-scan pipeline (#402)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/403"
   }
 ]
