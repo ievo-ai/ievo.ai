@@ -1560,5 +1560,16 @@
     "description": "fix: gate evolution.md vendoring behind a security-auditor re-audit (#357)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/417"
+  },
+  {
+    "id": "EVO-142",
+    "date": "2026-07-23",
+    "title": "ievo-ai/skills v0.54.10",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: strip C0 control characters from validator frontmatter values (#378)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/418"
   }
 ]
