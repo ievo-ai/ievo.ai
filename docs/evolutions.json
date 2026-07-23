@@ -1571,5 +1571,16 @@
     "description": "fix: strip C0 control characters from validator frontmatter values (#378)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/418"
+  },
+  {
+    "id": "EVO-143",
+    "date": "2026-07-23",
+    "title": "ievo-ai/skills v0.54.11",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: coerce non-string truthy JSON fields in truncate() instead of throwing (#412)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/419"
   }
 ]
