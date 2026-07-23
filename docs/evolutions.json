@@ -1538,5 +1538,16 @@
     "description": "fix: validate owner/repo in repo-indexer.md before Bash invocation (#361)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/415"
+  },
+  {
+    "id": "EVO-140",
+    "date": "2026-07-23",
+    "title": "ievo-ai/skills v0.54.8",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: add corrected disallowedTools defense-in-depth to repo-indexer.md (#371)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/416"
   }
 ]
