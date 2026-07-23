@@ -1505,5 +1505,16 @@
     "description": "fix: symlink-safe enumeration in scan_repo.mjs (#363)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/409"
+  },
+  {
+    "id": "EVO-137",
+    "date": "2026-07-23",
+    "title": "ievo-ai/skills v0.54.5",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: escape [ and ! in escapeMdCell to neutralize Markdown link/image syntax (#377)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/410"
   }
 ]
