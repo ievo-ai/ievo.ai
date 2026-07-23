@@ -1549,5 +1549,16 @@
     "description": "fix: add corrected disallowedTools defense-in-depth to repo-indexer.md (#371)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/416"
+  },
+  {
+    "id": "EVO-141",
+    "date": "2026-07-23",
+    "title": "ievo-ai/skills v0.54.9",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: gate evolution.md vendoring behind a security-auditor re-audit (#357)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/417"
   }
 ]
