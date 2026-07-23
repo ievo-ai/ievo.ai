@@ -1527,5 +1527,16 @@
     "description": "fix: guard feedback/SKILL.md issue title against shell interpolation (#372)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/414"
+  },
+  {
+    "id": "EVO-139",
+    "date": "2026-07-23",
+    "title": "ievo-ai/skills v0.54.7",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: validate owner/repo in repo-indexer.md before Bash invocation (#361)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/415"
   }
 ]
