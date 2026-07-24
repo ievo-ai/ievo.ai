@@ -1659,5 +1659,16 @@
     "description": "fix: make scan_repo.mjs output-file naming injective (#401)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/435"
+  },
+  {
+    "id": "EVO-151",
+    "date": "2026-07-24",
+    "title": "ievo-ai/skills v0.59.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat(skills): reorder all 19 SKILL.md descriptions to trigger-intent framing (#205)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/437"
   }
 ]
