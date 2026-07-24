@@ -1604,5 +1604,16 @@
     "description": "fix: migrate agent disallowedTools off Bash-stripping shape (#405)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/421"
+  },
+  {
+    "id": "EVO-146",
+    "date": "2026-07-24",
+    "title": "ievo-ai/skills v0.55.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: add scrub.mjs — privacy scrub for evo-auto failure capture (#423)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/426"
   }
 ]
