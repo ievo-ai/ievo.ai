@@ -1637,5 +1637,16 @@
     "description": "feat: hooks-setup platform-compat sweep — CC v2.1.152–v2.1.195 + Codex (#429)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/431"
+  },
+  {
+    "id": "EVO-149",
+    "date": "2026-07-24",
+    "title": "ievo-ai/skills v0.58.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: add capability-overlap + stack-relevance filters to init recommendation step (#427)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/434"
   }
 ]
