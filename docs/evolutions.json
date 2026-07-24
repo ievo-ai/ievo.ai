@@ -1648,5 +1648,16 @@
     "description": "feat: add capability-overlap + stack-relevance filters to init recommendation step (#427)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/434"
+  },
+  {
+    "id": "EVO-150",
+    "date": "2026-07-24",
+    "title": "ievo-ai/skills v0.58.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: make scan_repo.mjs output-file naming injective (#401)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/435"
   }
 ]
