@@ -1670,5 +1670,16 @@
     "description": "feat(skills): reorder all 19 SKILL.md descriptions to trigger-intent framing (#205)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/437"
+  },
+  {
+    "id": "EVO-152",
+    "date": "2026-07-24",
+    "title": "ievo-ai/skills v0.60.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat(init): self-register iEvo for team sync (#436)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/438"
   }
 ]
