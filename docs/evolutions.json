@@ -1703,5 +1703,16 @@
     "description": "fix: document CC v2.1.187 sandbox.credentials + WebFetch domain scoping (#234)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/440"
+  },
+  {
+    "id": "EVO-155",
+    "date": "2026-07-24",
+    "title": "ievo-ai/skills v0.60.3",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: upgrade validate_skills.mjs missing effort: from warning to error (#187)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/441"
   }
 ]
