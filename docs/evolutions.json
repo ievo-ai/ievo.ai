@@ -1714,5 +1714,16 @@
     "description": "fix: upgrade validate_skills.mjs missing effort: from warning to error (#187)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/441"
+  },
+  {
+    "id": "EVO-156",
+    "date": "2026-07-24",
+    "title": "ievo-ai/skills v0.60.4",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: small-correctness sweep — reload-skills, defaultEnabled, dev install docs (#166)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/442"
   }
 ]
