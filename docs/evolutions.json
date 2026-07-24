@@ -1725,5 +1725,16 @@
     "description": "fix: small-correctness sweep — reload-skills, defaultEnabled, dev install docs (#166)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/442"
+  },
+  {
+    "id": "EVO-157",
+    "date": "2026-07-24",
+    "title": "ievo-ai/skills v0.61.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: add effort/paths/argument-hint frontmatter sweep (#157)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/443"
   }
 ]
