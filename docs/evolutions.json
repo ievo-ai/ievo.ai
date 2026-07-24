@@ -1615,5 +1615,16 @@
     "description": "feat: add scrub.mjs — privacy scrub for evo-auto failure capture (#423)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/426"
+  },
+  {
+    "id": "EVO-147",
+    "date": "2026-07-24",
+    "title": "ievo-ai/skills v0.56.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: wire opt-in failure-capture into evo-auto-enable/disable (#424)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/430"
   }
 ]
