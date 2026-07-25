@@ -1747,5 +1747,16 @@
     "description": "fix: deep-review Step 1 falls back to committed diff on clean PR branch (#445)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/447"
+  },
+  {
+    "id": "EVO-159",
+    "date": "2026-07-25",
+    "title": "ievo-ai/skills v0.62.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: document Cursor v3.7/v3.8 platform-native alternatives (#203)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/451"
   }
 ]
