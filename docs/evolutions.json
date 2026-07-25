@@ -1780,5 +1780,16 @@
     "description": "fix: emit full evo-spec frontmatter in init step-9 overlay stubs (#449)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/453"
+  },
+  {
+    "id": "EVO-162",
+    "date": "2026-07-25",
+    "title": "ievo-ai/skills v0.62.3",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: gate init + evo-auto toggles on the invoking client (#432)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/454"
   }
 ]
