@@ -1758,5 +1758,16 @@
     "description": "feat: document Cursor v3.7/v3.8 platform-native alternatives (#203)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/451"
+  },
+  {
+    "id": "EVO-160",
+    "date": "2026-07-25",
+    "title": "ievo-ai/skills v0.62.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: validate and JSON-encode version-check hook metadata (#450)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/452"
   }
 ]
