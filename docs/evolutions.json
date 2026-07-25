@@ -1769,5 +1769,16 @@
     "description": "fix: validate and JSON-encode version-check hook metadata (#450)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/452"
+  },
+  {
+    "id": "EVO-161",
+    "date": "2026-07-25",
+    "title": "ievo-ai/skills v0.62.2",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: emit full evo-spec frontmatter in init step-9 overlay stubs (#449)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/453"
   }
 ]
