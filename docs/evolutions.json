@@ -1802,5 +1802,16 @@
     "description": "fix: commit tracked dispatcher shims for evo-auto-enable hooks (#446)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/455"
+  },
+  {
+    "id": "EVO-164",
+    "date": "2026-07-25",
+    "title": "ievo-ai/skills v0.63.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: platform-mismatch self-check offers to report caught bugs upstream (#433)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/458"
   }
 ]
