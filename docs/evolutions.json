@@ -1857,5 +1857,16 @@
     "description": "docs: document Cursor v3.6-v3.9 platform surfaces — compat sweep (#235)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/470"
+  },
+  {
+    "id": "EVO-169",
+    "date": "2026-07-26",
+    "title": "ievo-ai/skills v0.68.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: document Codex MCP tool-timeout gotcha for security-auditor (#227)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/471"
   }
 ]
