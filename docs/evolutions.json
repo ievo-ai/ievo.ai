@@ -1868,5 +1868,16 @@
     "description": "fix: document Codex MCP tool-timeout gotcha for security-auditor (#227)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/471"
+  },
+  {
+    "id": "EVO-170",
+    "date": "2026-07-26",
+    "title": "ievo-ai/skills v0.68.2",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "docs: note CC v2.1.181 /config verbose alternative in debug-on/off (#218)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/473"
   }
 ]
