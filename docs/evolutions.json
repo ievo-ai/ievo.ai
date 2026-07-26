@@ -1824,5 +1824,16 @@
     "description": "docs: Codex named permission profiles for security-check parity (#170)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/464"
+  },
+  {
+    "id": "EVO-166",
+    "date": "2026-07-26",
+    "title": "ievo-ai/skills v0.65.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "docs: add OTel cost-monitoring section to debug-on/SKILL.md (#171)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/465"
   }
 ]
