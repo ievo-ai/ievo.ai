@@ -1813,5 +1813,16 @@
     "description": "feat: platform-mismatch self-check offers to report caught bugs upstream (#433)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/458"
+  },
+  {
+    "id": "EVO-165",
+    "date": "2026-07-26",
+    "title": "ievo-ai/skills v0.64.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "docs: Codex named permission profiles for security-check parity (#170)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/464"
   }
 ]
