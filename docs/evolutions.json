@@ -1912,5 +1912,16 @@
     "description": "feat: add plugin-state snapshot + Codex /app alternative to handoff/SKILL.md (#204)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/479"
+  },
+  {
+    "id": "EVO-174",
+    "date": "2026-07-26",
+    "title": "ievo-ai/skills v0.70.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: add v2.1.176 hook if-condition compat note to hooks-setup (#201)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/481"
   }
 ]
