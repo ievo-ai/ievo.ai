@@ -1890,5 +1890,16 @@
     "description": "docs: document CC v2.1.178 nested .claude/skills loading for monorepos (#209)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/474"
+  },
+  {
+    "id": "EVO-172",
+    "date": "2026-07-26",
+    "title": "ievo-ai/skills v0.69.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat(handoff): add active-plan-state and iEvo-overlay-reference sections (#206)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/477"
   }
 ]
