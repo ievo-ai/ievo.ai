@@ -1846,5 +1846,16 @@
     "description": "feat: add MVP boundary scope-limiter to deep-review/SKILL.md (#243)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/466"
+  },
+  {
+    "id": "EVO-168",
+    "date": "2026-07-26",
+    "title": "ievo-ai/skills v0.68.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "docs: document Cursor v3.6-v3.9 platform surfaces — compat sweep (#235)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/470"
   }
 ]
