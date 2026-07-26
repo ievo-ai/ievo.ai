@@ -1835,5 +1835,16 @@
     "description": "docs: add OTel cost-monitoring section to debug-on/SKILL.md (#171)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/465"
+  },
+  {
+    "id": "EVO-167",
+    "date": "2026-07-26",
+    "title": "ievo-ai/skills v0.66.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: add MVP boundary scope-limiter to deep-review/SKILL.md (#243)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/466"
   }
 ]
