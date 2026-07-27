@@ -1934,5 +1934,16 @@
     "description": "feat: add mechanical post-install verification to init/SKILL.md (#241)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/487"
+  },
+  {
+    "id": "EVO-176",
+    "date": "2026-07-27",
+    "title": "ievo-ai/skills v0.71.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: document /cd v2.1.169 directory-switch guidance in init/SKILL.md (#193)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/488"
   }
 ]
