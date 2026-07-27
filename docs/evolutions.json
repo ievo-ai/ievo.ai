@@ -1945,5 +1945,16 @@
     "description": "fix: document /cd v2.1.169 directory-switch guidance in init/SKILL.md (#193)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/488"
+  },
+  {
+    "id": "EVO-177",
+    "date": "2026-07-27",
+    "title": "ievo-ai/skills v0.72.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: add MITRE ATT&CK technique cross-references to vuln-scan output (#184)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/490"
   }
 ]
