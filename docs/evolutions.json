@@ -1923,5 +1923,16 @@
     "description": "fix: add v2.1.176 hook if-condition compat note to hooks-setup (#201)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/481"
+  },
+  {
+    "id": "EVO-175",
+    "date": "2026-07-27",
+    "title": "ievo-ai/skills v0.71.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: add mechanical post-install verification to init/SKILL.md (#241)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/487"
   }
 ]
