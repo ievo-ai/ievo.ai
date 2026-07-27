@@ -1978,5 +1978,16 @@
     "description": "feat: add file-sensitivity pre-classification to vuln-scan/SKILL.md (#200)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/496"
+  },
+  {
+    "id": "EVO-180",
+    "date": "2026-07-27",
+    "title": "ievo-ai/skills v0.74.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: cover untracked files in deep-review --working mode (#483)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/497"
   }
 ]
