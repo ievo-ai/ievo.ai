@@ -1956,5 +1956,16 @@
     "description": "feat: add MITRE ATT&CK technique cross-references to vuln-scan output (#184)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/490"
+  },
+  {
+    "id": "EVO-178",
+    "date": "2026-07-27",
+    "title": "ievo-ai/skills v0.73.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: add post-update plugin-list verification to update.md (#182)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/491"
   }
 ]
