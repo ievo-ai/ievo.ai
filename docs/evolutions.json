@@ -1967,5 +1967,16 @@
     "description": "feat: add post-update plugin-list verification to update.md (#182)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/491"
+  },
+  {
+    "id": "EVO-179",
+    "date": "2026-07-27",
+    "title": "ievo-ai/skills v0.74.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: add file-sensitivity pre-classification to vuln-scan/SKILL.md (#200)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/496"
   }
 ]
