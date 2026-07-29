@@ -2000,5 +2000,16 @@
     "description": "fix: validate name as safe path component in install-protocol.md vendor fetch (#500)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/502"
+  },
+  {
+    "id": "EVO-182",
+    "date": "2026-07-29",
+    "title": "ievo-ai/skills v0.74.3",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: add security-auditor re-audit gate to consolidate/extract-best-practices (#499)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/503"
   }
 ]
