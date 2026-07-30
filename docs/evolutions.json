@@ -2033,5 +2033,16 @@
     "description": "fix: widen scrub.mjs NAME_ALT for digit-leading secret names (#507)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/509"
+  },
+  {
+    "id": "EVO-185",
+    "date": "2026-07-30",
+    "title": "ievo-ai/skills v0.75.2",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: add excerpt-containment fencing to deep-reviewer.md report template (#505)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/510"
   }
 ]
