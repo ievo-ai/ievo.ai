@@ -2011,5 +2011,16 @@
     "description": "fix: add security-auditor re-audit gate to consolidate/extract-best-practices (#499)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/503"
+  },
+  {
+    "id": "EVO-183",
+    "date": "2026-07-30",
+    "title": "ievo-ai/skills v0.75.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: add /ievo:review-retrospective skill for post-merge review triage (#468)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/504"
   }
 ]
