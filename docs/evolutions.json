@@ -2099,5 +2099,16 @@
     "description": "fix: add excerpt-containment rule to review-retrospective.md (#522)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/524"
+  },
+  {
+    "id": "EVO-191",
+    "date": "2026-07-31",
+    "title": "ievo-ai/skills v0.75.8",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: guard scan_repo.mjs enumerateHooks/enumerateMcp against null manifest entries (#521)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/525"
   }
 ]
