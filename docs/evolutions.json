@@ -2077,5 +2077,16 @@
     "description": "fix: strip control chars from validator path/dir-name output (#495)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/518"
+  },
+  {
+    "id": "EVO-189",
+    "date": "2026-07-31",
+    "title": "ievo-ai/skills v0.75.6",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: redact full multi-word secret values in scrub.mjs (#493)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/520"
   }
 ]
