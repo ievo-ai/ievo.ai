@@ -2055,5 +2055,16 @@
     "description": "fix: add secret-redaction rule to deep-reviewer.md Point 11 (#498)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/514"
+  },
+  {
+    "id": "EVO-187",
+    "date": "2026-07-31",
+    "title": "ievo-ai/skills v0.75.4",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: platform-aware Codex fallback for evo project marker (#511)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/515"
   }
 ]
