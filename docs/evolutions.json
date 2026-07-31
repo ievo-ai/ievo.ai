@@ -2044,5 +2044,16 @@
     "description": "fix: add excerpt-containment fencing to deep-reviewer.md report template (#505)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/510"
+  },
+  {
+    "id": "EVO-186",
+    "date": "2026-07-31",
+    "title": "ievo-ai/skills v0.75.3",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: add secret-redaction rule to deep-reviewer.md Point 11 (#498)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/514"
   }
 ]
