@@ -2066,5 +2066,16 @@
     "description": "fix: platform-aware Codex fallback for evo project marker (#511)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/515"
+  },
+  {
+    "id": "EVO-188",
+    "date": "2026-07-31",
+    "title": "ievo-ai/skills v0.75.5",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: strip control chars from validator path/dir-name output (#495)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/518"
   }
 ]
