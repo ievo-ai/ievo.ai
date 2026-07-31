@@ -2088,5 +2088,16 @@
     "description": "fix: redact full multi-word secret values in scrub.mjs (#493)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/520"
+  },
+  {
+    "id": "EVO-190",
+    "date": "2026-07-31",
+    "title": "ievo-ai/skills v0.75.7",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: add excerpt-containment rule to review-retrospective.md (#522)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/524"
   }
 ]
