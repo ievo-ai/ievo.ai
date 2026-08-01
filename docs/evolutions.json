@@ -2154,5 +2154,16 @@
     "description": "feat: contributor mode + widened /ievo:feedback payload (#448)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/533"
+  },
+  {
+    "id": "EVO-196",
+    "date": "2026-08-01",
+    "title": "ievo-ai/skills v0.76.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: mktemp per-target staging dir in /ievo:update, closes symlink pre-planting (#532)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/534"
   }
 ]
