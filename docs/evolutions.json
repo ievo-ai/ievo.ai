@@ -2209,5 +2209,16 @@
     "description": "fix: add excerpt containment to inspect/SKILL.md Step 5 (#531)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/535"
+  },
+  {
+    "id": "EVO-201",
+    "date": "2026-08-01",
+    "title": "ievo-ai/skills v0.77.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: add \"digest in place\" option to consolidate's entry-cluster mode (#529)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/538"
   }
 ]
