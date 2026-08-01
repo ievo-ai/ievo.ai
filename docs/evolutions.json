@@ -2165,5 +2165,16 @@
     "description": "fix: mktemp per-target staging dir in /ievo:update, closes symlink pre-planting (#532)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/534"
+  },
+  {
+    "id": "EVO-197",
+    "date": "2026-08-01",
+    "title": "ievo-ai/skills v0.76.3",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: redact PEM private-key blocks and URL-embedded credentials in scrub.mjs (#530)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/536"
   }
 ]
