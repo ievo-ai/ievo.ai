@@ -2198,5 +2198,16 @@
     "description": "fix: detect Codex Desktop without misdetecting Claude Code (#461)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/528"
+  },
+  {
+    "id": "EVO-200",
+    "date": "2026-08-01",
+    "title": "ievo-ai/skills v0.76.6",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: add excerpt containment to inspect/SKILL.md Step 5 (#531)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/535"
   }
 ]
