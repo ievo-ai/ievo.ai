@@ -2110,5 +2110,16 @@
     "description": "fix: guard scan_repo.mjs enumerateHooks/enumerateMcp against null manifest entries (#521)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/525"
+  },
+  {
+    "id": "EVO-192",
+    "date": "2026-08-01",
+    "title": "ievo-ai/skills v0.75.9",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: escape owner/repo@skill identifiers in feedback Flow B template (#494)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/519"
   }
 ]
