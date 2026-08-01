@@ -2132,5 +2132,16 @@
     "description": "docs: correct evolution.md stale nested-spawning wording (#484)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/526"
+  },
+  {
+    "id": "EVO-194",
+    "date": "2026-08-01",
+    "title": "ievo-ai/skills v0.75.11",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: contain evolution_candidates.mjs --text-file to .ievo/, scrub content (#523)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/527"
   }
 ]
