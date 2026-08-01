@@ -2187,5 +2187,16 @@
     "description": "fix: document Codex v0.142.0 floor for Step 6/8 parallel dispatch (#232)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/537"
+  },
+  {
+    "id": "EVO-199",
+    "date": "2026-08-01",
+    "title": "ievo-ai/skills v0.76.5",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: detect Codex Desktop without misdetecting Claude Code (#461)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/528"
   }
 ]
