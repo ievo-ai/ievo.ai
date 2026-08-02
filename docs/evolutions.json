@@ -2231,5 +2231,16 @@
     "description": "fix: add excerpt containment to evolution.md Step 5 SKIPPED report (#545)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/546"
+  },
+  {
+    "id": "EVO-203",
+    "date": "2026-08-02",
+    "title": "ievo-ai/skills v0.77.3",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: redact Authorization/Cookie/Set-Cookie header credentials in scrub.mjs (#544)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/547"
   }
 ]
