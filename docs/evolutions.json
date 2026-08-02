@@ -2220,5 +2220,16 @@
     "description": "feat: add \"digest in place\" option to consolidate's entry-cluster mode (#529)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/538"
+  },
+  {
+    "id": "EVO-202",
+    "date": "2026-08-02",
+    "title": "ievo-ai/skills v0.77.2",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: add excerpt containment to evolution.md Step 5 SKIPPED report (#545)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/546"
   }
 ]
