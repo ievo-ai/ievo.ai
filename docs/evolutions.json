@@ -2242,5 +2242,16 @@
     "description": "fix: redact Authorization/Cookie/Set-Cookie header credentials in scrub.mjs (#544)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/547"
+  },
+  {
+    "id": "EVO-204",
+    "date": "2026-08-03",
+    "title": "ievo-ai/skills v0.77.4",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: guard validate_skills.mjs's discoverSkillFiles against symlink-following",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/542"
   }
 ]
