@@ -2253,5 +2253,16 @@
     "description": "fix: guard validate_skills.mjs's discoverSkillFiles against symlink-following",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/542"
+  },
+  {
+    "id": "EVO-205",
+    "date": "2026-08-03",
+    "title": "ievo-ai/skills v0.77.5",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: contain discover.mjs's --stack-file to project .ievo/ (#543)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/548"
   }
 ]
