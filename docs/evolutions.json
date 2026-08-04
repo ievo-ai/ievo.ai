@@ -2297,5 +2297,16 @@
     "description": "fix: redact Stripe underscore-delimited API key formats in scrub.mjs (#558)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/561"
+  },
+  {
+    "id": "EVO-209",
+    "date": "2026-08-04",
+    "title": "ievo-ai/skills v0.78.3",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: redact camelCase credential keys in scrub.mjs (#557)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/563"
   }
 ]
