@@ -2275,5 +2275,16 @@
     "description": "feat: offer to share generally-reusable evo lessons upstream (#554)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/555"
+  },
+  {
+    "id": "EVO-207",
+    "date": "2026-08-04",
+    "title": "ievo-ai/skills v0.78.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: redact real secret values in security-auditor before public RED reports (#556)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/560"
   }
 ]
