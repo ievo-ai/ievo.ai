@@ -2286,5 +2286,16 @@
     "description": "fix: redact real secret values in security-auditor before public RED reports (#556)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/560"
+  },
+  {
+    "id": "EVO-208",
+    "date": "2026-08-04",
+    "title": "ievo-ai/skills v0.78.2",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: redact Stripe underscore-delimited API key formats in scrub.mjs (#558)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/561"
   }
 ]
