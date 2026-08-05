@@ -2352,5 +2352,16 @@
     "description": "fix: relocate evolution_candidates.mjs storage outside git-worktree tree (#564)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/575"
+  },
+  {
+    "id": "EVO-214",
+    "date": "2026-08-05",
+    "title": "ievo-ai/skills v0.78.9",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: validate BASE_BRANCH before Bash interpolation in vuln-scan.md (#565)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/576"
   }
 ]
