@@ -2363,5 +2363,16 @@
     "description": "fix: validate BASE_BRANCH before Bash interpolation in vuln-scan.md (#565)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/576"
+  },
+  {
+    "id": "EVO-215",
+    "date": "2026-08-05",
+    "title": "ievo-ai/skills v0.78.10",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: pass discover.mjs stack JSON via --stack-file, not echo (#567)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/578"
   }
 ]
