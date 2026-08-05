@@ -2308,5 +2308,16 @@
     "description": "fix: redact camelCase credential keys in scrub.mjs (#557)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/563"
+  },
+  {
+    "id": "EVO-210",
+    "date": "2026-08-05",
+    "title": "ievo-ai/skills v0.78.4",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: validate owner/repo charset before Step 1's gh api call in inspect/SKILL.md (#566)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/569"
   }
 ]
