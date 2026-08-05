@@ -2330,5 +2330,16 @@
     "description": "fix: evo-analysis-nudge detects and warns on evo-auto wiring drift (#551)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/571"
+  },
+  {
+    "id": "EVO-212",
+    "date": "2026-08-05",
+    "title": "ievo-ai/skills v0.78.6",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "docs: document file-level sandbox.credentials mask mode (CC v2.1.221) (#559)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/572"
   }
 ]
