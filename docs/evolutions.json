@@ -2341,5 +2341,16 @@
     "description": "docs: document file-level sandbox.credentials mask mode (CC v2.1.221) (#559)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/572"
+  },
+  {
+    "id": "EVO-213",
+    "date": "2026-08-05",
+    "title": "ievo-ai/skills v0.78.8",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: relocate evolution_candidates.mjs storage outside git-worktree tree (#564)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/575"
   }
 ]
