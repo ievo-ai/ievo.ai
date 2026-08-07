@@ -2418,5 +2418,16 @@
     "description": "feat: auto-commit /ievo:evo overlay writes on a feature branch (skills#552, pain 1/3)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/593"
+  },
+  {
+    "id": "EVO-220",
+    "date": "2026-08-07",
+    "title": "ievo-ai/skills v0.79.1",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: drop dead default-branch-name fallback in auto-commit gate",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/594"
   }
 ]
