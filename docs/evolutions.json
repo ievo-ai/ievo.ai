@@ -2374,5 +2374,16 @@
     "description": "fix: pass discover.mjs stack JSON via --stack-file, not echo (#567)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/578"
+  },
+  {
+    "id": "EVO-216",
+    "date": "2026-08-07",
+    "title": "ievo-ai/skills v0.78.11",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: close symlink-containment gap in evolution.md's vendor-fetch (#582)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/587"
   }
 ]
