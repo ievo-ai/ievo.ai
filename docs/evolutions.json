@@ -2429,5 +2429,16 @@
     "description": "fix: drop dead default-branch-name fallback in auto-commit gate",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/594"
+  },
+  {
+    "id": "EVO-221",
+    "date": "2026-08-07",
+    "title": "ievo-ai/skills v0.79.2",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: clear stale \"or assumed\" wording in default-branch point 3",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/595"
   }
 ]
