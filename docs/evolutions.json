@@ -2396,5 +2396,16 @@
     "description": "fix: close symlink-containment gap in install-protocol.md's vendor-fetch (#590)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/591"
+  },
+  {
+    "id": "EVO-218",
+    "date": "2026-08-07",
+    "title": "ievo-ai/skills v0.78.13",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: close symlink-containment gap in update.md's vendor-refresh (#583)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/592"
   }
 ]
