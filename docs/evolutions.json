@@ -2407,5 +2407,16 @@
     "description": "fix: close symlink-containment gap in update.md's vendor-refresh (#583)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/592"
+  },
+  {
+    "id": "EVO-219",
+    "date": "2026-08-07",
+    "title": "ievo-ai/skills v0.79.0",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "feat: auto-commit /ievo:evo overlay writes on a feature branch (skills#552, pain 1/3)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/593"
   }
 ]
