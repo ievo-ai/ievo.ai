@@ -2473,5 +2473,16 @@
     "description": "fix: strip control characters from CLI/stdin error echoes (#601)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/604"
+  },
+  {
+    "id": "EVO-225",
+    "date": "2026-08-08",
+    "title": "ievo-ai/skills v0.80.5",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: strip Unicode bidi-override and zero-width chars, not just ASCII controls (#600)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/605"
   }
 ]
