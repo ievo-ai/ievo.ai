@@ -2484,5 +2484,16 @@
     "description": "fix: strip Unicode bidi-override and zero-width chars, not just ASCII controls (#600)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/605"
+  },
+  {
+    "id": "EVO-226",
+    "date": "2026-08-09",
+    "title": "ievo-ai/skills v0.80.6",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: validate PR number before shell interpolation in vuln-scan --pr scope (#606)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/609"
   }
 ]
