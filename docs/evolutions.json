@@ -2517,5 +2517,16 @@
     "description": "fix: underscore-prefixed secret names bypass scrub.mjs redaction (#612)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/616"
+  },
+  {
+    "id": "EVO-229",
+    "date": "2026-08-11",
+    "title": "ievo-ai/skills v0.80.9",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: contain excerpt injection + gate third-party provenance in evolution overlays (#613)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/618"
   }
 ]
