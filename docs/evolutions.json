@@ -2550,5 +2550,16 @@
     "description": "fix: cover kebab-case secret names + Azure's api-key header in scrub.mjs (#620)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/627"
+  },
+  {
+    "id": "EVO-232",
+    "date": "2026-08-12",
+    "title": "ievo-ai/skills v0.80.12",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: excerpt-contain overlay-status's rendered names, summaries, mtimes (#622)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/626"
   }
 ]
