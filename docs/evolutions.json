@@ -2528,5 +2528,16 @@
     "description": "fix: contain excerpt injection + gate third-party provenance in evolution overlays (#613)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/618"
+  },
+  {
+    "id": "EVO-230",
+    "date": "2026-08-12",
+    "title": "ievo-ai/skills v0.80.10",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: extend evolution.md's verbatim-authorship gate to project scope (#621)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/624"
   }
 ]
