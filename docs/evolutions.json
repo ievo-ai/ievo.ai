@@ -2572,5 +2572,16 @@
     "description": "fix: excerpt-contain review-retrospective's Coverage-section observations (#629)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/630"
+  },
+  {
+    "id": "EVO-234",
+    "date": "2026-08-15",
+    "title": "ievo-ai/skills v0.80.14",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: close scan_repo.mjs's .claude-plugin/hooks symlink gap (#631)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/635"
   }
 ]
