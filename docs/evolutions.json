@@ -2627,5 +2627,16 @@
     "description": "fix: fence update.md re-audit prompt, narrow security-auditor.md containment scope (#642)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/645"
+  },
+  {
+    "id": "EVO-239",
+    "date": "2026-08-18",
+    "title": "ievo-ai/skills v0.80.19",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: lstat-guard evolution_candidates.mjs's session-file scan (#643)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/646"
   }
 ]
