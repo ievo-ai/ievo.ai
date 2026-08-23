@@ -2649,5 +2649,16 @@
     "description": "fix: strip raw newlines from validate_agents/validate_skills CI log messages (#648)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/649"
+  },
+  {
+    "id": "EVO-241",
+    "date": "2026-08-23",
+    "title": "ievo-ai/skills v0.80.21",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: strip raw newlines from scan_repo.mjs's CLI error-echo sinks (#650)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/653"
   }
 ]
