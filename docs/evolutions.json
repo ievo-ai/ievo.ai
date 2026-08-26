@@ -2671,5 +2671,16 @@
     "description": "fix: version/SKILL.md changelog excerpt containment (#657)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/658"
+  },
+  {
+    "id": "EVO-243",
+    "date": "2026-08-26",
+    "title": "ievo-ai/skills v0.80.24",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: excerpt-contain init/SKILL.md Step 8a + log-format.md Sections 8/9 (#662)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/663"
   }
 ]
