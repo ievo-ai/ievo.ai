@@ -2693,5 +2693,16 @@
     "description": "fix: excerpt-contain security-auditor.md candidate/alternative_suggestion fields (#666)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/667"
+  },
+  {
+    "id": "EVO-245",
+    "date": "2026-08-28",
+    "title": "ievo-ai/skills v0.80.27",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: cap discover.mjs readStdin() at 256 KB, mirroring --stack-file (#671)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/672"
   }
 ]
