@@ -2737,5 +2737,16 @@
     "description": "fix: treat overlay content as untrusted data in overlay-status/SKILL.md (#683)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/685"
+  },
+  {
+    "id": "EVO-249",
+    "date": "2026-09-03",
+    "title": "ievo-ai/skills v0.80.32",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: fence the module field in vuln-scan's excerpt-containment notes (#682)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/686"
   }
 ]
