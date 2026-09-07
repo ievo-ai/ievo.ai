@@ -2759,5 +2759,16 @@
     "description": "fix: cap scan_repo.mjs item enumeration, truncate matcher/event/name (#684)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/687"
+  },
+  {
+    "id": "EVO-251",
+    "date": "2026-09-07",
+    "title": "ievo-ai/skills v0.80.34",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: add symlink-containment check to security-check/SKILL.md's fetch flow (#690)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/693"
   }
 ]
