@@ -2770,5 +2770,16 @@
     "description": "fix: add symlink-containment check to security-check/SKILL.md's fetch flow (#690)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/693"
+  },
+  {
+    "id": "EVO-252",
+    "date": "2026-09-07",
+    "title": "ievo-ai/skills v0.80.35",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: bound scrub.mjs's NAME_ALT camelCase alternative's leading run (#692)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/694"
   }
 ]
