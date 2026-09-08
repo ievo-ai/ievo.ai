@@ -2781,5 +2781,16 @@
     "description": "fix: bound scrub.mjs's NAME_ALT camelCase alternative's leading run (#692)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/694"
+  },
+  {
+    "id": "EVO-253",
+    "date": "2026-09-08",
+    "title": "ievo-ai/skills v0.80.36",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: excerpt-contain repo-indexer.md's Step 1 validation-failure line (#695)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/696"
   }
 ]
