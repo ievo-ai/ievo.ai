@@ -2792,5 +2792,16 @@
     "description": "fix: excerpt-contain repo-indexer.md's Step 1 validation-failure line (#695)",
     "confidence": 1.0,
     "pr": "https://github.com/ievo-ai/skills/pull/696"
+  },
+  {
+    "id": "EVO-254",
+    "date": "2026-09-10",
+    "title": "ievo-ai/skills v0.80.37",
+    "agent": "eva",
+    "type": "milestone",
+    "target": "ievo-ai/skills",
+    "description": "fix: cap scrub.mjs's unbounded stdin read at 256 KB (#697)",
+    "confidence": 1.0,
+    "pr": "https://github.com/ievo-ai/skills/pull/698"
   }
 ]
